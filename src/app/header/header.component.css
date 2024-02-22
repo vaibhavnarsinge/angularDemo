@@ -1,11 +1,13 @@
 img{
-    width: 10vw;
+    width: 6vw;
     mix-blend-mode: color-;
 }
 .header{
+    height: 4vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: solid rgba(0, 0, 0, 0.514) 2px;
 }
 
 .navlist{
@@ -15,14 +17,14 @@ img{
 }
 
 .navlist a{
-    margin: 0.7vw;
+    margin: 0.5vw;
     text-decoration: none;
     color: rgb(255, 255, 255);
-    font-size: 1.3vw
+    font-size: 1vw
 }
 
 .navlist h1{
-    width: 7vw;
+    width: 6vw;
     margin: 0.5vw;
     display: flex;
     justify-content: center;

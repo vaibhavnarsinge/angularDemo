@@ -7,6 +7,8 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule} from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { LoginAppComponent } from './login-app/login-app.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { LoginAppComponent } from './login-app/login-app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    NgbModule
 
   ],
   providers: [],

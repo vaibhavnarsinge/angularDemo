@@ -1,1 +1,27 @@
-<p>login-app works!</p>
+<div class="forms">
+    
+    <form [formGroup]="loginform" (ngSubmit)="submitForm()">
+        <h3>Login</h3>
+       <div style="position: relative;">
+        <input type="text"  formControlName="user" placeholder="Enter Username" [(ngModel)]="loginobj.user"/>   
+        <div *ngIf="isSubmit || loginform.get('user')?.invalid && (loginform.get('user')?.dirty || (loginform.get('user')?.touched))">
+            <div *ngIf=" loginform.get('user')?.hasError('required')" ><span>Please Enter Correct Email</span></div>
+            <div *ngIf=" loginform.get('user')?.hasError('email')" ><span>Please Enter Correct Email</span></div>
+        </div>     
+       </div>
+       <div style="position: relative;">
+        <input type="password" formControlName="password" placeholder="Enter Password"  [(ngModel)]="loginobj.password"/>
+        <div *ngIf="isSubmit || loginform.get('password')?.invalid && (loginform.get('password')?.dirty || (loginform.get('password')?.touched))">
+            <div *ngIf=" loginform.get('password')?.hasError('required')" ><span>Please Enter Correct Email</span></div>
+
+        </div>
+       </div>
+        <div class="link">
+            <a href="#">Forgot Password</a>
+            <a href="#">Forgot Username</a>
+        </div>
+        <button type="submit" (click)="add()">Login</button>
+    </form>
+    <button type="submit" (click)="deletedata()">Delete Data</button>
+
+</div>

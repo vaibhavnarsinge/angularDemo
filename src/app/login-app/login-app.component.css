@@ -1,0 +1,63 @@
+.forms{
+    display: flex;
+    justify-content: center;
+    /* margin-top: 25vh; */
+    height: 80vh;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1px;
+    height: 18vw;
+    width: 24vw;
+    border: solid rgba(0, 0, 0, 0.644) 2px;
+}
+
+.link{
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.link a{
+    font-size: 0.8vw;
+    text-decoration: none;
+    color: black;
+    margin: 2vw;
+}
+
+input{
+    border: none;
+    border-bottom: solid black 2px;
+    padding: 0.5vw;
+    width: 15vw;
+    outline: none;
+}
+::placeholder{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 0.9vw;
+}
+
+button{
+    padding: 0.5vw;
+    width: 15vw;
+    font-size: 1vw;
+    border: none;
+    outline: none;
+    cursor:pointer;
+}
+
+span{
+    color: red; 
+    width: 100px; 
+    font-size: 0.8vw; 
+    position: absolute;
+    margin-left: 2.4vw;
+    width: 10vw;
+    z-index: 99;
+}
