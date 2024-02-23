@@ -8,14 +8,18 @@ import { FormsModule} from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { LoginAppComponent } from './login-app/login-app.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { RegisterComponent } from './register/register.component';
+import { HomeComponent } from './home/home.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HeaderComponent,
-    LoginAppComponent
+    LoginAppComponent,
+    RegisterComponent,
+    HomeComponent
     
   ],
   imports: [

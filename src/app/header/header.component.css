@@ -3,7 +3,7 @@ img{
     mix-blend-mode: color-;
 }
 .header{
-    height: 4vw;
+    height: 13vh;
     display: flex;
     justify-content: space-between;
     align-items: center;

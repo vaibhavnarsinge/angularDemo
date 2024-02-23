@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { Component,OnInit } from '@angular/core';
+import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 export const StrongPasswordRegx: RegExp = /^(?=[^A-Z]*[A-Z])(?=[^a-z]*[a-z])(?=\D*\d).{8,}$/;
 @Component({
   selector: 'app-login-app',
@@ -8,50 +8,51 @@ export const StrongPasswordRegx: RegExp = /^(?=[^A-Z]*[A-Z])(?=[^a-z]*[a-z])(?=\
 })
 
 export class LoginAppComponent {
+  alluser:any;
 
-
-isSubmit:boolean = false;
-
-alluser:any [] = [];
-loginform = new FormGroup({
-  
-    user:new FormControl('',),
-    password:new FormControl('',)
-  })
-
-  ngOnInit():void{
-
-    const localData = localStorage.getItem('alluser');
-    if(localData != null){
-      this.alluser = JSON.parse(localData);
-    }
-    }
-
-  submitForm(){
-    this.isSubmit = true;
-    if (this.loginform.invalid){
-      return;
-    }
-    console.log(this.loginform.value);
-  }
-
-
+  allUser:any [] = [];
   loginobj:any = {
     user:'',
     password:''
   };
 
-  add(){
-    this.alluser.push(this.loginobj);
-    localStorage.setItem('alluser',JSON.stringify(this.alluser));
-    this.loginobj = {
-      user:'',
-      password:''
+  loginform !: FormGroup;
+  submitted:boolean = false;
+
+constructor(private formbuilder:FormBuilder){}
+
+
+ngOnInit():void{
+    this.loginform = this.formbuilder.group ({
+  
+      user:['',[Validators.required,Validators.email]],
+      password: ['',Validators.required]
+    })
+   
+
+    const localData = localStorage.getItem('allUser');
+    if(localData != null){
+      this.alluser = JSON.parse(localData);
     }
+    }
+
+
+    OnSubmit(){
+    this.submitted = true;
+
+    if (this.loginform.invalid){
+      return;
+    }
+    alert("Login successfull");
+
+   
+    localStorage.setItem('allUser',JSON.stringify(this.loginobj)); 
+    console.log(this.loginform.value);
   }
 
   deletedata(){
-    localStorage.removeItem('alluser')
+    localStorage.removeItem('allUser');
+    window.location.reload();
   }
 
 }

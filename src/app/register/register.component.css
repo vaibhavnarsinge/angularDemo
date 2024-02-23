@@ -7,25 +7,19 @@
     background-color: #23242a;
 }
 
-
-
 form{
-    /* box-shadow: -1px -1px 4px 3px  rgb(176, 176, 176); */
     display: flex;
-    margin-top: -100px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 1px;
-    height: 20vw;
+    height: 29vw;
     width: 24vw;
-    border: ridge rgba(255, 255, 255, 0.644) 8px;
+    border: ridge rgba(255, 255, 255, 0.644) 5px;
 }
-
 form h3{
     color:white;
 }
-
 
 .link{
     height: 8vh;
@@ -35,23 +29,19 @@ form h3{
 }
 
 .link a{
-    font-size: 0.7vw;
+    font-size: 0.9vw;
     text-decoration: none;
     color: rgb(105, 105, 105);
     margin: 2vw;
 }
 
 .link:hover a{
-    font-size: 0.7vw;
+    font-size: 0.9vw;
     text-decoration: none;
     color: rgb(255, 255, 255);
     margin: 2vw;
 }
-.inputBox{
-    position: relative;
-    width: 100%;
-    margin-top: 35px;
-}
+
 input{
     position: relative;
     width: 100%;
@@ -65,7 +55,11 @@ input{
     letter-spacing: 0.05em;
     z-index: 10;
 }
-
+::placeholder{
+    color: rgb(114, 114, 114);
+    text-align: center;
+    font-size: 0.9vw;
+}
 
 span{
     height: 14px;
@@ -73,12 +67,15 @@ span{
     background-color: #dcdeed;
 }
 
-::placeholder{
-    color: rgb(158, 158, 158);
-    text-align: center;
-    font-size: 0.9vw;
+.er span{
+    color: red;
+    width: 100px;
+    font-size: 0.7vw;
+    position: absolute;
+    margin-left: -60px;
+    width: 10vw;
+    z-index: 99;
 }
-
 
 button{
     padding: 0.4vw;
@@ -91,33 +88,4 @@ button{
     cursor:pointer;
     border: ridge rgba(255, 255, 255, 0.644) 5px;
     margin-left: 16px;
-}
-
-.er span{
-    color: red;
-    width: 100px;
-    font-size: 0.7vw;
-    position: absolute;
-    margin-top: -7px;
-    margin-left: 2.4vw;
-    width: 10vw;
-    z-index: 99;
-}
-
-button:focus{
-    border: groove rgba(255, 255, 255, 0.644) 5px;
-}
-
-.userdata{
-
-    bottom: 0;
-    position: fixed;
-}
-.userdata button{
-    padding: 0.5vw;
-    width: 100%;
-    font-size: 1vw;
-    border: none;
-    outline: none;
-    cursor:pointer;
 }

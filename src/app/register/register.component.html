@@ -1,0 +1,43 @@
+<div class="forms">
+    
+    <form [formGroup]="loginform" (ngSubmit)="OnSubmit()">
+       
+        <h3>Registeration </h3>
+
+        <div class="inputbox">
+            <input type="text" [ngClass]="{'is-invalid':submitted && loginform.get('name')?.errors}"  formControlName="name" placeholder="Enter Name"   [(ngModel)]="loginobj.user"/>  
+        </div>
+        <div *ngIf="submitted || loginform.get('name')?.invalid && (loginform.get('name')?.dirty || (loginform.get('name')?.touched))">
+            <div class="er" *ngIf=" loginform.get('name')?.hasError('required')" ><span >Please Enter Correct Name</span></div>
+        </div>  
+        <div class="inputbox">
+            <input type="number" [ngClass]="{'is-invalid':submitted && loginform.get('phone')?.errors}"  formControlName="phone" placeholder="Enter Phone No."   [(ngModel)]="loginobj.phone"/>  
+        </div>
+        <div *ngIf="submitted || loginform.get('phone')?.invalid && (loginform.get('phone')?.dirty || (loginform.get('phone')?.touched))">
+            <div class="er" *ngIf=" loginform.get('phone')?.hasError('required')" ><span >Please Enter Correct Phone</span></div>
+        </div>  
+        <div class="inputbox">
+            <input type="email" [ngClass]="{'is-invalid':submitted && loginform.get('email')?.errors}"  formControlName="email" placeholder="Enter Email"   [(ngModel)]="loginobj.email"/>  
+        </div>
+        <div *ngIf="submitted || loginform.get('email')?.invalid && (loginform.get('email')?.dirty || (loginform.get('email')?.touched))">
+            <div class="er" *ngIf=" loginform.get('email')?.hasError('required')" ><span >Please Enter Correct Email</span></div>
+        </div>  
+        <div class="inputbox">
+            <input type="password" [ngClass]="{'is-invalid':submitted && loginform.get('password')?.errors}"  formControlName="password" placeholder="Enter Password" [(ngModel)]="loginobj.password" />
+        </div>
+        <div *ngIf="submitted || loginform.get('password')?.invalid && (loginform.get('password')?.dirty || (loginform.get('password')?.touched))">
+            <div class="er" *ngIf=" loginform.get('password')?.hasError('required')" ><span>Please Enter Correct Password</span></div>
+
+        </div>
+        
+      
+            
+        <div class="link">
+            
+            <a href="#">Login Here</a>
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+
+</div>
