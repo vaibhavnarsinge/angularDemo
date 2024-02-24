@@ -1,91 +1,96 @@
-.forms{
-    display: flex;
-    justify-content: center;
-    /* margin-top: 25vh; */
-    height: 87vh;
-    align-items: center;
-    background-color: #23242a;
-}
-
-form{
+.forms {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    gap: 1px;
-    height: 29vw;
-    width: 24vw;
-    border: ridge rgba(255, 255, 255, 0.644) 5px;
-}
-form h3{
-    color:white;
+    height: 90vh;
+    background-color: #f2f2f2; /* Change background color */
+    padding: 20px; /* Add some padding */
 }
 
-.link{
-    height: 8vh;
-    margin-top: -15px;
+form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+form h3 {
+    color: #333; /* Change heading color */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.inputbox {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    font-size: 16px;
+}
+
+.er span {
+    color: red;
+    font-size: 14px;
+    position: absolute;
+    bottom: -20px;
+}
+
+.link {
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-.link a{
-    font-size: 0.9vw;
+.link a {
     text-decoration: none;
-    color: rgb(105, 105, 105);
-    margin: 2vw;
+    color: #007bff; /* Change link color */
+    font-size: 14px;
+    transition: color 0.3s ease;
+    padding: 8px 12px; /* Add padding to links */
+    border-radius: 4px; /* Add border-radius to links */
 }
 
-.link:hover a{
-    font-size: 0.9vw;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    margin: 2vw;
+.link a:hover {
+    color: #001d3c;
 }
 
-input{
-    position: relative;
+button {
+    margin-top: 2vh;
+    padding: 14px;
     width: 100%;
-    margin: 0.6vw;
-    background: transparent;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
     border: none;
-    border: ridge rgba(255, 255, 255, 0.644) 5px;
-    outline: none;
-    color: #dcdeed;
-    font-size: 1em;
-    letter-spacing: 0.05em;
-    z-index: 10;
-}
-::placeholder{
-    color: rgb(114, 114, 114);
-    text-align: center;
-    font-size: 0.9vw;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-span{
-    height: 14px;
+button:hover {
+    background-color: #0056b3;
+}
+
+
+.er1, .er2, .er3, .er4{
     position: absolute;
-    background-color: #dcdeed;
+    height: 3vh;
+    margin-top: -20px;
+    margin-left:50px ;
+    color: rgb(157, 0, 0);
+    font-size: 0.8vw;
 }
 
-.er span{
-    color: red;
-    width: 100px;
-    font-size: 0.7vw;
-    position: absolute;
-    margin-left: -60px;
-    width: 10vw;
-    z-index: 99;
-}
-
-button{
-    padding: 0.4vw;
-    width: 68%;
-    font-size: 1vw;
-    font-weight: 600;
-    color: rgb(54, 53, 53);
-    border: none;
-    outline: none;
-    cursor:pointer;
-    border: ridge rgba(255, 255, 255, 0.644) 5px;
-    margin-left: 16px;
+.inputbox input:focus {
+    border-color: #007bff; 
+    box-shadow: 0 0 5px #007bff;
 }

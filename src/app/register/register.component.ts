@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-register',
@@ -19,25 +21,19 @@ export class RegisterComponent {
   loginform !: FormGroup;
   submitted:boolean = false;
 
-constructor(private formbuilder:FormBuilder){}
+constructor(private route: ActivatedRoute, private router: Router, private formbuilder: FormBuilder){}
 
 
 
 ngOnInit():void{
   this.loginform = this.formbuilder.group ({
 
-    name:['',[Validators.required]],
+    name:['',[Validators.required]] ,
     phone:['',Validators.required],
     email:['',Validators.required],
     password: ['',Validators.required]
   })
-
-
-  const localData = localStorage.getItem('allRegUser');
-    if(localData != null){
-      this.alluser = JSON.parse(localData);
-    }
-    }
+}
 
 
     OnSubmit(){
@@ -47,11 +43,14 @@ ngOnInit():void{
       return;
     }
     alert("Register successfull");
-
     
-    this.allRegUser.push(this.loginobj);
     localStorage.setItem('allRegUser',JSON.stringify(this.loginobj)); 
-    console.log(this.loginform.value);
+    this.router.navigate(['/login']);
   }
+
+  // deleteData() {
+  //   localStorage.removeItem('allRegUser');
+  //   this.allRegUser = [];
+  // }
 
 }

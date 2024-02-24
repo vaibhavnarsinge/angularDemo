@@ -1,42 +1,34 @@
 <div class="forms">
-    
-    <form [formGroup]="loginform" (ngSubmit)="OnSubmit()">
-        <h3>Login</h3>
-       <div>
-        <div class="inputbox">
-            <input type="text" [ngClass]="{'is-invalid':submitted && loginform.get('user')?.errors}"  formControlName="user" placeholder="Enter Username"  [(ngModel)]="loginobj.user"/>   
-            
-        </div>
-        <div *ngIf="submitted || loginform.get('user')?.invalid && (loginform.get('user')?.dirty || (loginform.get('user')?.touched))">
-            <div class="er" *ngIf=" loginform.get('user')?.hasError('required')" ><span >Please Enter Correct Email</span></div>
-            <div class="er" *ngIf=" loginform.get('user')?.hasError('email')" ><span >Please Enter Correct Email</span></div>
-        </div>     
-       </div>
-       <div>
-        <div class="inputbox">
-            <input type="password" [ngClass]="{'is-invalid':submitted && loginform.get('password')?.errors}"  formControlName="password" placeholder="Enter Password" [(ngModel)]="loginobj.password" />
-        </div>
-        <div *ngIf="submitted || loginform.get('password')?.invalid && (loginform.get('password')?.dirty || (loginform.get('password')?.touched))">
-            <div class="er" *ngIf=" loginform.get('password')?.hasError('required')" ><span>Please Enter Correct Email</span></div>
+    <div class="login-section">
+        <form [formGroup]="loginform" (ngSubmit)="OnSubmit()">
+            <h3>Login</h3>
+            <div class="inputbox">
+                <input type="text" [ngClass]="{'is-invalid':submitted && loginform.get('user')?.errors}" 
+                formControlName="user" placeholder="Enter Username" [(ngModel)]="loginobj.user"/>
+            </div>
+            <div *ngIf="submitted || loginform.get('user')?.invalid && (loginform.get('user')?.dirty || (loginform.get('user')?.touched))">
+                <div class="er1" *ngIf=" loginform.get('user')?.hasError('required')" ><span>Please Enter Correct Email</span></div>
+                <div class="er1" *ngIf=" loginform.get('user')?.hasError('email')" ><span>Please Enter Correct Email</span></div>
+            </div>
+            <div class="inputbox">
+                <input type="password" [ngClass]="{'is-invalid':submitted && loginform.get('password')?.errors}" 
+                formControlName="password" placeholder="Enter Password" [(ngModel)]="loginobj.password" />
+            </div>
+            <div *ngIf="submitted || loginform.get('password')?.invalid && (loginform.get('password')?.dirty || (loginform.get('password')?.touched))">
+                <div class="er2" *ngIf=" loginform.get('password')?.hasError('required')" ><span>Please Enter Correct Password</span></div>
+            </div>
 
-        </div>
-       </div>
-        <div class="link">
-            <a href="#">Forgot Password</a>
-            <a href="#">Forgot Username</a>
-        </div>
-        <button type="submit" routerLink="" >Login</button>
-    </form>
+            <div class="forgot-password">
+                <a href="#">Forgot Password</a>
+                <a href="#">Forgot Username</a>
+            </div>
+            <button type="submit" >Login</button>
+        </form>
+    </div>
+</div>
 
-    
-   
+<div class="ldata">
+    <h3>{{alluser.email}}</h3>
+    <h3>{{alluser.password}}</h3>
 
-
-    <!-- <div class="userdata">
-        <ul >
-            <li>user: {{alluser.user}}</li>
-            <li>password: {{alluser.password}}</li>
-            <button type="submit" (click)="deletedata()">Delete-Data</button>
-        </ul>
-    </div> -->
-
+</div>

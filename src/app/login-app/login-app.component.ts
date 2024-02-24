@@ -1,5 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+
 export const StrongPasswordRegx: RegExp = /^(?=[^A-Z]*[A-Z])(?=[^a-z]*[a-z])(?=\D*\d).{8,}$/;
 @Component({
   selector: 'app-login-app',
@@ -10,7 +12,6 @@ export const StrongPasswordRegx: RegExp = /^(?=[^A-Z]*[A-Z])(?=[^a-z]*[a-z])(?=\
 export class LoginAppComponent {
   alluser:any;
 
-  allUser:any [] = [];
   loginobj:any = {
     user:'',
     password:''
@@ -19,7 +20,7 @@ export class LoginAppComponent {
   loginform !: FormGroup;
   submitted:boolean = false;
 
-constructor(private formbuilder:FormBuilder){}
+  constructor(private route: ActivatedRoute, private router: Router, private formbuilder: FormBuilder){}
 
 
 ngOnInit():void{
@@ -28,31 +29,32 @@ ngOnInit():void{
       user:['',[Validators.required,Validators.email]],
       password: ['',Validators.required]
     })
-   
 
-    const localData = localStorage.getItem('allUser');
+    const localData = localStorage.getItem('allRegUser');
     if(localData != null){
       this.alluser = JSON.parse(localData);
     }
-    }
+}
 
 
     OnSubmit(){
-    this.submitted = true;
+      if((this.loginobj.user == this.alluser.email)&&(this.loginobj.password == this.alluser.password)){
+
+        this.submitted = true;
+        alert("Login successfull");
+        this.router.navigate(['/']);
+
+      }
+      else{
+        alert("invalid details");
+      }
 
     if (this.loginform.invalid){
       return;
     }
-    alert("Login successfull");
-
-   
-    localStorage.setItem('allUser',JSON.stringify(this.loginobj)); 
-    console.log(this.loginform.value);
+    
   }
 
-  deletedata(){
-    localStorage.removeItem('allUser');
-    window.location.reload();
-  }
+ 
 
 }

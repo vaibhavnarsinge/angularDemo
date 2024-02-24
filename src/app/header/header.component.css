@@ -1,63 +1,74 @@
-img{
-    width: 6vw;
-    mix-blend-mode: color-;
-}
-.header{
-    height: 13vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: solid rgba(0, 0, 0, 0.514) 2px;
-}
-
-.navlist{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+.header {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e6e6e6;
+  padding: 0 20px 0 0;
+  color: #fff;
+  border-bottom: 1px rgba(0, 0, 0, 0.161) solid;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transition: box-shadow 0.3s ease; /* Add transition on box shadow */
 }
 
-.navlist a{
-    margin: 0.5vw;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 1vw
+.header img {
+  width: auto;
+  height: 10vh;
 }
 
-.navlist h1{
-    width: 6vw;
-    margin: 0.5vw;
-    display: flex;
-    justify-content: center;
-    border: solid rgba(0, 0, 0, 0.603) 2px;
-    border-radius: 19px;
-    cursor: pointer;
+.navlist {
+  display: flex;
+  align-items: center; /* Align items vertically */
 }
 
-.navlist h1:nth-child(2) a{
-    color: black;
+.navlist a {
+  text-decoration: none;
+  color: #000000c5;
+  margin: 0 15px; /* Add equal margin around links */
+  font-size: 18px;
+  padding: 10px 15px; /* Increase padding */
+  border-radius: 8px; /* Add more rounded corners */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add color transition */
 }
 
-.navlist h1:nth-child(3) a{
-    color: black;
-
-}
-.navlist h1:nth-child(4) a{
-    color: black;
-
+.navlist a.active,
+.navlist a:hover {
+  background-color: #fff; /* Change background color on hover */
+  color: #007bff; /* Change text color on hover */
 }
 
-.navlist h1:nth-child(1){
-    background-color: rgb(0, 80, 47);
+.home-link a {
+  color: #575757; /* Change the color for the home link */
+  font-weight: bold; /* Make the text bold */
+  transition: color 0.3s ease;
 }
 
-.navlist h1:nth-child(5){
-    background-color: rgb(148, 0, 0);
+.header:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase box shadow on hover */
 }
 
-.navlist h1:nth-child(1):hover{
-    background-color: #009959;
-}
-
-.navlist h1:nth-child(5):hover{
-    background-color: rgb(255, 2, 2);
-}
+.company-name {
+    font-family: 'Arial', sans-serif; /* Use a clean and widely supported font */
+    font-size: 2.3vw; /* Set font size */
+    font-weight: bold; /* Add bold font weight */
+    color: #fff; /* Set color to white */
+    text-transform: uppercase; /* Convert text to uppercase */
+    padding: 10px; /* Add padding for spacing */
+    background-color: #00596c; /* Set background color */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    overflow: hidden; /* Hide overflowing content */
+    position: relative; /* Positioning for animation */
+    animation: pulse 2s infinite alternate; /* Apply pulsating animation */
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1); /* Start at normal size */
+    }
+    100% {
+      transform: scale(1.1); /* Increase size by 10% */
+    }
+  }
+  

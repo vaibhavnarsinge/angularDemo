@@ -10,7 +10,8 @@ import { LoginAppComponent } from './login-app/login-app.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RegisterComponent } from './register/register.component';
-import { HomeComponent } from './home/home.component'
+import { HomeComponent } from './home/home.component';
+import { WelcomeComponent } from './welcome/welcome.component'
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HomeComponent } from './home/home.component'
     HeaderComponent,
     LoginAppComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    WelcomeComponent
     
   ],
   imports: [
