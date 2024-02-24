@@ -42,7 +42,7 @@ ngOnInit():void{
 
         this.submitted = true;
         alert("Login successfull");
-        this.router.navigate(['/']);
+        this.router.navigate(['/welcome']);
 
       }
       else{

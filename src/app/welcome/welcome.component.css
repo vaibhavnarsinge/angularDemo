@@ -1,0 +1,97 @@
+.mainwel {
+  display: flex;
+  min-height: 90vh;
+}
+
+.sidebar {
+  width: 13%;
+  background-color: #cccccc;
+  color: #454545;
+  padding: 20px;
+  transition: 1s ease;
+}
+
+.sidebar h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #454545;
+  font-weight: bold;
+  display: block;
+  padding: 8px;
+}
+
+.sidebar ul li a:hover {
+  background-color: #555;
+}
+
+.dashboard {
+  width: 89%;
+  padding: 20px;
+}
+
+.icn {
+  position: absolute;
+  top: 0;
+  background-color: white;
+  margin: 6vw 0 0 9vw;
+  cursor: pointer;
+}
+
+.sidebar-closed .sidebar {
+  margin-left: -13vw;
+  transition: 1s ease;
+}
+
+
+.sidebar-closed .icn {
+    position: absolute;
+    top: 0;
+    background-color: white;
+    margin: 6vw 0 0 11vw;
+    transition: 1s ease;
+  }
+
+.sidebar-closed .dashboard {
+    width: 100%;
+    padding: 20px;
+  }
+
+
+  .custom-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .custom-table th, .custom-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .custom-table th {
+    background-color: #f2f2f2;
+    text-align: center;
+  }
+  
+  .custom-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .custom-table tbody tr:hover {
+    background-color: #f2f2f2;
+  }
+  

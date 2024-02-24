@@ -1,1 +1,63 @@
-<p>welcome works!</p>
+<div class="mainwel" [ngClass]="{ 'sidebar-closed': !isSidebarOpen }">
+  <div class="sidebar">
+    <h2>Menu</h2>
+
+    <ul>
+      <li><a href="/welcome">-Dashboard</a></li>
+      <li><a href="/addemp">-Add Employee</a></li>
+    </ul>
+
+    <div class="icn" (click)="toggleSidebar()">
+      <img src="../../assets/menu-regular-24.png" alt="" class="src" />
+    </div>
+  </div>
+  <div class="dashboard">
+    <h2>Dashboard</h2>
+
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th>Sr No.</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone No</th>
+          <th>Address</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Data 1</td>
+          <td>Data 2</td>
+          <td>Data 3</td>
+          <td>Data 4</td>
+          <td>Data 5</td>
+        </tr>
+        <tr>
+          <td>
+            <h6>{{ 1 }}</h6>
+          </td>
+          <td>
+            <h6>{{ alluser.user }}</h6>
+          </td>
+          <td>
+            <h6>{{ alluser.email }}</h6>
+          </td>
+          <td>
+            <h6>{{ alluser.phone }}</h6>
+          </td>
+          <td>
+            <h6>{{ alluser.password }}</h6>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- <div class="ldata">
+        <h6>{{alluser.user}}</h6>
+        <h6>{{alluser.email}}</h6>
+        <h6>{{alluser.phone}}</h6>
+        <h6>{{alluser.password}}</h6>
+        
+    </div> -->
+  </div>
+</div>
