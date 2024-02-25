@@ -8,8 +8,8 @@
   padding: 0 20px 0 0;
   color: #fff;
   border-bottom: 1px rgba(0, 0, 0, 0.161) solid;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-  transition: box-shadow 0.3s ease; /* Add transition on box shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
 }
 
 .header img {
@@ -19,56 +19,55 @@
 
 .navlist {
   display: flex;
-  align-items: center; /* Align items vertically */
+  align-items: center;
 }
 
 .navlist a {
   text-decoration: none;
   color: #000000c5;
-  margin: 0 15px; /* Add equal margin around links */
+  margin: 0 15px;
   font-size: 18px;
-  padding: 10px 15px; /* Increase padding */
-  border-radius: 8px; /* Add more rounded corners */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Add color transition */
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navlist a.active,
 .navlist a:hover {
-  background-color: #fff; /* Change background color on hover */
-  color: #007bff; /* Change text color on hover */
+  background-color: #fff;
+  color: #007bff;
 }
 
 .home-link a {
-  color: #575757; /* Change the color for the home link */
-  font-weight: bold; /* Make the text bold */
+  color: #575757;
+  font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .header:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase box shadow on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .company-name {
-    font-family: 'Arial', sans-serif; /* Use a clean and widely supported font */
-    font-size: 2.3vw; /* Set font size */
-    font-weight: bold; /* Add bold font weight */
-    color: #fff; /* Set color to white */
-    text-transform: uppercase; /* Convert text to uppercase */
-    padding: 10px; /* Add padding for spacing */
-    background-color: #00596c; /* Set background color */
-    border-radius: 5px; /* Add border radius for rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-    overflow: hidden; /* Hide overflowing content */
-    position: relative; /* Positioning for animation */
-    animation: pulse 2s infinite alternate; /* Apply pulsating animation */
+  font-family: 'Arial', sans-serif;
+  font-size: 2.3vw;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px;
+  background-color: #00596c;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
   }
-  
-  @keyframes pulse {
-    0% {
-      transform: scale(1); /* Start at normal size */
-    }
-    100% {
-      transform: scale(1.1); /* Increase size by 10% */
-    }
+  100% {
+    transform: scale(1.1);
   }
-  
+}

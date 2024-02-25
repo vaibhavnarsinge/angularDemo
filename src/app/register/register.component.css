@@ -3,8 +3,8 @@
     justify-content: center;
     align-items: center;
     height: 90vh;
-    background-color: #f2f2f2; /* Change background color */
-    padding: 20px; /* Add some padding */
+    background-color: #f2f2f2;
+    padding: 20px;
 }
 
 form {
@@ -16,7 +16,7 @@ form {
 }
 
 form h3 {
-    color: #333; /* Change heading color */
+    color: #333;
     font-size: 24px;
     margin-bottom: 20px;
 }
@@ -28,7 +28,7 @@ form h3 {
 
 input {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     outline: none;
@@ -51,11 +51,11 @@ input {
 
 .link a {
     text-decoration: none;
-    color: #007bff; /* Change link color */
+    color: #007bff;
     font-size: 14px;
     transition: color 0.3s ease;
-    padding: 8px 12px; /* Add padding to links */
-    border-radius: 4px; /* Add border-radius to links */
+    padding: 8px 12px;
+    border-radius: 4px;
 }
 
 .link a:hover {
@@ -80,12 +80,11 @@ button:hover {
     background-color: #0056b3;
 }
 
-
-.er1, .er2, .er3, .er4{
+.er1, .er2, .er3, .er4 {
     position: absolute;
     height: 3vh;
     margin-top: -20px;
-    margin-left:50px ;
+    margin-left: 50px;
     color: rgb(157, 0, 0);
     font-size: 0.8vw;
 }

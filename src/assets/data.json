@@ -1,7 +1,6 @@
 [
-    { "name": "John Doe", "email": "john@example.com", "phone": "1234567890", "address": "123 Main St" },
-    { "name": "Jane Smith", "email": "jane@example.com", "phone": "9876543210", "address": "456 Elm St" },
-    { "name": "Alice Johnson", "email": "alice@example.com", "phone": "5551234567", "address": "789 Oak St" },
-    { "name": "Bob Williams", "email": "bob@example.com", "phone": "9998887777", "address": "101 Pine St" }
-  ]
-  
+  { "name": "John Doe", "email": "john@example.com", "phone": "1234567890", "address": "123 Main St" },
+  { "name": "Jane Smith", "email": "jane@example.com", "phone": "9876543210", "address": "456 Elm St" },
+  { "name": "Alice Johnson", "email": "alice@example.com", "phone": "5551234567", "address": "789 Oak St" },
+  { "name": "Bob Williams", "email": "bob@example.com", "phone": "9998887777", "address": "101 Pine St" }
+]

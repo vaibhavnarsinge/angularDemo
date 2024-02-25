@@ -3,12 +3,12 @@
     justify-content: center;
     align-items: center;
     height: 90vh;
-    background-color: #eeeeee; /* Change background color */
+    background-color: #eeeeee; 
 
 }
 
 .login-section {
-    background-color: #fffdfd; /* Solid white background for the login section */
+    background-color: #fffdfd; 
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -28,7 +28,7 @@
 
 .inputbox input {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     outline: none;

@@ -13,6 +13,7 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import {HttpClientModule} from '@angular/common/http';
+import { AddemployeeComponent } from './addemployee/addemployee.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {HttpClientModule} from '@angular/common/http';
     LoginAppComponent,
     RegisterComponent,
     HomeComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    AddemployeeComponent
     
   ],
   imports: [
