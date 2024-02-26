@@ -1,29 +1,240 @@
 <div class="employee-form">
     <h3>Add Employee</h3>
-    <form class="form" action="#" method="POST">
+    <form [formGroup]="addEmpForm" class="form" (ngSubmit)="SaveUserData('')">
+       <div>
         <div class="input-box">
             <label for="empid">Employee ID:</label>
-            <input type="number" id="empid" name="empid" placeholder="Employee ID" required>
+            <input type="number" [ngClass]="{'is-invalid':submitted && addEmpForm.get('empid')?.errors}"  id="empid" name="empid"  formControlName="empid" ngModel placeholder="Employee ID" required>
+        </div>
+        <div class="val" *ngIf="submitted || addEmpForm.get('empid')?.invalid && (addEmpForm.get('empid')?.dirty || (addEmpForm.get('empid')?.touched))">
+            <div class="er1" *ngIf=" addEmpForm.get('empid')?.hasError('required')" ><span>Please Enter Emp ID</span></div>
+        </div>
+       </div>
+
+       <div>
+        <div class="input-box">
+            <label for="name">Name:</label>
+            <input type="text" [ngClass]="{'is-invalid':submitted && addEmpForm.get('name')?.errors}"  id="name" name="name"  formControlName="name" ngModel placeholder="First Name" required>
+        </div>
+        <div class="val" *ngIf="submitted || addEmpForm.get('name')?.invalid && (addEmpForm.get('name')?.dirty || (addEmpForm.get('name')?.touched))">
+            <div class="er2" *ngIf=" addEmpForm.get('name')?.hasError('required')" ><span>Please Enter Emp Name</span></div>
+        </div>
+       </div>
+        
+        <div>
+            <div class="input-box">
+                <label for="email">Email:</label>
+                <input type="email" [ngClass]="{'is-invalid':submitted && addEmpForm.get('email')?.errors}"  id="email" name="email"  formControlName="email" ngModel placeholder="example@example.com" required>
+            </div>
+            <div class="val" *ngIf="submitted || addEmpForm.get('email')?.invalid && (addEmpForm.get('email')?.dirty || (addEmpForm.get('email')?.touched))">
+                <div class="er3" *ngIf=" addEmpForm.get('email')?.hasError('required')" ><span>Please Enter Emp Email</span></div>
+            </div>
+        </div>
+
+       <div>
+        <div class="input-box">
+            <label for="phone">Phone:</label>
+            <input type="tel" [ngClass]="{'is-invalid':submitted && addEmpForm.get('phone')?.errors}"  id="phone" name="phone"  formControlName="phone" ngModel placeholder="1236547892" required>
+        </div>
+        <div class="val" *ngIf="submitted || addEmpForm.get('phone')?.invalid && (addEmpForm.get('phone')?.dirty || (addEmpForm.get('phone')?.touched))">
+            <div class="er4" *ngIf=" addEmpForm.get('phone')?.hasError('required')" ><span>Please Enter Emp Phone</span></div>
+        </div>
+       </div>
+
+       <div>
+        <div class="input-box">
+            <label for="aadhar">Aadhar No.</label>
+            <input type="number"  [ngClass]="{'is-invalid':submitted && addEmpForm.get('aadhar')?.errors}"  id="aadhar" name="aadhar"  formControlName="aadhar" ngModel placeholder="0000 0000 0000" required>
+        </div>
+        <div class="val" *ngIf="submitted || addEmpForm.get('aadhar')?.invalid && (addEmpForm.get('aadhar')?.dirty || (addEmpForm.get('aadhar')?.touched))">
+            <div class="er5" *ngIf=" addEmpForm.get('aadhar')?.hasError('required')" ><span>Please Enter Emp Aadhar</span></div>
+        </div>
+       </div>
+
+      <div>
+        <div class="input-box">
+            <label for="position">Position:</label>
+            <input type="text" [ngClass]="{'is-invalid':submitted && addEmpForm.get('position')?.errors}"  id="position" name="position"  formControlName="position" ngModel placeholder="eg. Developer" required>
+        </div>
+        <div class="val" *ngIf="submitted || addEmpForm.get('position')?.invalid && (addEmpForm.get('position')?.dirty || (addEmpForm.get('position')?.touched))">
+            <div class="er6" *ngIf=" addEmpForm.get('position')?.hasError('required')" ><span>Please Enter Emp Position</span></div>
+        </div>
+      </div>
+
+       <div>
+        <div class="input-box">
+            <label for="gender">Gender:</label>
+            <select id="gender" style=" width: 20vw;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+            font-size: 16px;
+            padding: 5px;
+            " name="gender" [ngClass]="{'is-invalid':submitted && addEmpForm.get('gender')?.errors}"   formControlName="gender" ngModel required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        <div class="val" *ngIf="submitted || addEmpForm.get('gender')?.invalid && (addEmpForm.get('gender')?.dirty || (addEmpForm.get('gender')?.touched))">
+            <div class="er7" *ngIf=" addEmpForm.get('gender')?.hasError('required')" ><span>Please Enter Emp Gender</span></div>
+        </div>
+       </div>
+
+       <div>
+        <div class="input-box">
+            <label for="JDate">Joining Date:</label>
+            <input type="date" [ngClass]="{'is-invalid':submitted && addEmpForm.get('jDate')?.errors}"  id="jDate"  formControlName="jDate" name="jDate" ngModel  required>
+        </div>
+        <div class="val" *ngIf="submitted || addEmpForm.get('JDate')?.invalid && (addEmpForm.get('JDate')?.dirty || (addEmpForm.get('JDate')?.touched))">
+            <div class="er8" *ngIf=" addEmpForm.get('JDate')?.hasError('required')" ><span>Please Enter Emp Date</span></div>
+        </div>
+       </div>
+
+      <div>
+        <div class="input-box">
+            <label for="etype">Employment Type:</label>
+            <select id="etype" style=" width: 20vw;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+            font-size: 16px;
+            padding: 5px;
+            " name="etype" [ngClass]="{'is-invalid':submitted && addEmpForm.get('etype')?.errors}"   formControlName="etype" ngModel required>
+                <option value="" disabled selected>Please Select</option>
+                <option value="Full Time">Full Time</option>
+                <option value="Part Time">Part Time</option>
+                <option value="Internship">Internship</option>
+            </select>
+        </div>
+        <div class="val" *ngIf="submitted || addEmpForm.get('etype')?.invalid && (addEmpForm.get('etype')?.dirty || (addEmpForm.get('etype')?.touched))">
+            <div class="er9" *ngIf=" addEmpForm.get('etype')?.hasError('required')" ><span>Please Enter Emp Type</span></div>
+        </div>
+      </div>
+
+       <div>
+        <div class="input-box">
+            <label for="address">Address:</label>
+            <textarea id="address" [ngClass]="{'is-invalid':submitted && addEmpForm.get('address')?.errors}"  name="address"  formControlName="address" ngModel placeholder="Address" rows="2" required></textarea>
+        </div>
+        <div class="val" *ngIf="submitted || addEmpForm.get('address')?.invalid && (addEmpForm.get('address')?.dirty || (addEmpForm.get('address')?.touched))">
+            <div class="er10" *ngIf=" addEmpForm.get('address')?.hasError('required')" ><span>Please Enter Emp Address</span></div>
+        </div>
+       </div>
+
+       <div>
+        <div class="input-box">
+            <label for="country">Country</label>
+            <select id="country" style=" width: 20vw;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+            font-size: 16px;
+            padding: 5px;
+            " name="country" [ngClass]="{'is-invalid':submitted && addEmpForm.get('country')?.errors}"  formControlName="country" ngModel required>
+                <option value="" selected>Please Select</option>
+                <option value="India" selected>India</option>
+                <option value="China" selected>China</option>
+                
+            </select>
+        </div>
+        <div class="val" *ngIf="submitted || addEmpForm.get('country')?.invalid && (addEmpForm.get('country')?.dirty || (addEmpForm.get('country')?.touched))">
+            <div class="er11" *ngIf=" addEmpForm.get('country')?.hasError('required')" ><span>Please Enter Emp Country</span></div>
+        </div>
+       </div>
+
+       <div>
+        <div class="input-box">
+            <label for="state">State</label>
+            <select id="state" style=" width: 20vw;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+            font-size: 16px;
+            padding: 5px;
+            " name="state" [ngClass]="{'is-invalid':submitted && addEmpForm.get('state')?.errors}"  formControlName="state" ngModel required>
+                <option value="" selected>Please Select</option>
+                <option value="Maharashtra" selected>Maharashtra</option>
+                <option value="Karnatak" selected>Karnatak</option>
+                <option value="Kerala" selected>Kerala</option>
+                <option value="Meghalaya" selected>Meghalaya</option>
+                <option value="Shijiazhuang" selected>Shijiazhuang</option>
+                <option value="Shenyang" selected>Shenyang</option>
+                <option value="Changsha" selected>Changsha</option>
+            </select>
+        </div>
+        <div class="val" *ngIf="submitted || addEmpForm.get('state')?.invalid && (addEmpForm.get('state')?.dirty || (addEmpForm.get('state')?.touched))">
+            <div class="er12" *ngIf=" addEmpForm.get('state')?.hasError('required')" ><span>Please Enter Emp State</span></div>
+        </div>
+       </div>
+
+       <div>
+        <div class="input-box">
+            <label for="city">City</label>
+            <select id="city" style=" width: 20vw;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+            font-size: 16px;
+            padding: 5px;
+            " name="city" [ngClass]="{'is-invalid':submitted && addEmpForm.get('city')?.errors}"  formControlName="city" ngModel required>
+                <option value="" selected>Please Select</option>
+                <option value="Pune" selected>Pune</option>
+                <option value="Mumbai" selected>Mumbai</option>
+            </select>
+        </div>
+        <div class="val" *ngIf="submitted || addEmpForm.get('city')?.invalid && (addEmpForm.get('city')?.dirty || (addEmpForm.get('city')?.touched))">
+            <div class="er13" *ngIf=" addEmpForm.get('city')?.hasError('required')" ><span>Please Enter Emp City</span></div>
+        </div>
+       </div>
+
+        <button type="submit" 
+        style=" width: 5vw;
+        border: 1px solid #7b1111;
+        border-radius: 4px;
+        outline: none;
+        font-size: 16px;
+        padding: 5px;">Add</button>
+    </form>
+  
+</div>
+
+
+
+
+
+
+
+<!-- 
+
+<div class="employee-form">
+    <h3>Add Employee</h3>
+    <form class="form" #addEmp="ngForm" (ngSubmit)="SaveUserData(addEmp.value)">
+        <div class="input-box">
+            <label for="empid">Employee ID:</label>
+            <input type="number" id="empid" name="empid" ngModel placeholder="Employee ID" required>
         </div>
         <div class="input-box">
-            <label for="first_name">First Name:</label>
-            <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" ngModel placeholder="First Name" required>
         </div>
-        <div class="input-box">
-            <label for="last_name">Last Name:</label>
-            <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
-        </div>
+        
         <div class="input-box">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Email" required>
+            <input type="email" id="email" name="email" ngModel placeholder="example@example.com" required>
         </div>
         <div class="input-box">
             <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+            <input type="tel" id="phone" name="phone" ngModel placeholder="1236547892" required>
+        </div>
+        <div class="input-box">
+            <label for="aadhar">Aadhar No.</label>
+            <input type="number" id="aadhar" name="aadhar" ngModel placeholder="0000 0000 0000" required>
         </div>
         <div class="input-box">
             <label for="position">Position:</label>
-            <input type="text" id="position" name="position" placeholder="Position" required>
+            <input type="text" id="position" name="position" ngModel placeholder="eg. Developer" required>
         </div>
         <div class="input-box">
             <label for="gender">Gender:</label>
@@ -33,25 +244,95 @@
             outline: none;
             font-size: 16px;
             padding: 5px;
-            " name="gender" required>
+            " name="gender" ngModel required>
                 <option value="" disabled selected>Select Gender</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
             </select>
         </div>
         <div class="input-box">
-            <label for="address">Address:</label>
-            <textarea id="address" name="address" placeholder="Address" rows="4" required></textarea>
+            <label for="JDate">Joining Date:</label>
+            <input type="date" id="jDate" name="jDate" ngModel  required>
         </div>
         <div class="input-box">
-           
-            <label for="same_address"> <input type="checkbox" style="width: 20px;" id="same_address" name="same_address">Same as Current Address</label>
-        
-            <textarea id="permanent_address" name="permanent_address" placeholder="Permanent Address" rows="4"></textarea>
+            <label for="etype">Employment Type:</label>
+            <select id="etype" style=" width: 20vw;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+            font-size: 16px;
+            padding: 5px;
+            " name="etype" ngModel required>
+                <option value="" disabled selected>Please Select</option>
+                <option value="Full Time">Full Time</option>
+                <option value="Part Time">Part Time</option>
+                <option value="Internship">Internship</option>
+            </select>
         </div>
+
+        <div class="input-box">
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" ngModel placeholder="Address" rows="2" required></textarea>
+        </div>
+        <div class="input-box">
+            <label for="country">Country</label>
+            <select id="country" style=" width: 20vw;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+            font-size: 16px;
+            padding: 5px;
+            " name="country" ngModel required>
+                <option value="" selected>Please Select</option>
+                <option value="India" selected>India</option>
+                <option value="China" selected>China</option>
+                
+            </select>
+        </div>
+        <div class="input-box">
+            <label for="state">State</label>
+            <select id="state" style=" width: 20vw;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+            font-size: 16px;
+            padding: 5px;
+            " name="state" ngModel required>
+                <option value="" selected>Please Select</option>
+                <option value="Maharashtra" selected>Maharashtra</option>
+                <option value="Karnatak" selected>Karnatak</option>
+                <option value="Kerala" selected>Kerala</option>
+                <option value="Meghalaya" selected>Meghalaya</option>
+                <option value="Shijiazhuang" selected>Shijiazhuang</option>
+                <option value="Shenyang" selected>Shenyang</option>
+                <option value="Changsha" selected>Changsha</option>
+
+                
+            </select>
+        </div>
+        <div class="input-box">
+            <label for="city">City</label>
+            <select id="city" style=" width: 20vw;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+            font-size: 16px;
+            padding: 5px;
+            " name="city" ngModel required>
+                <option value="" selected>Please Select</option>
+                <option value="Pune" selected>Pune</option>
+                <option value="Mumbai" selected>Mumbai</option>
+                
+            </select>
+        </div>
+
+        <button type="submit" 
+        style=" width: 5vw;
+        border: 1px solid #7b1111;
+        border-radius: 4px;
+        outline: none;
+        font-size: 16px;
+        padding: 5px;">Add</button>
     </form>
-    <div class="button-container">
-        <button type="submit">Add</button>
-    </div>
-</div>
+</div> -->

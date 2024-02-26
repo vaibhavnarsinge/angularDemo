@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import jsonData from '../../assets/data.json';
+import { EmployeeDataService } from '../services/employee-data.service';
+
 
 @Component({
   selector: 'app-welcome',
@@ -8,11 +9,13 @@ import jsonData from '../../assets/data.json';
   styleUrls: ['./welcome.component.css'],
 })
 export class WelcomeComponent {
-  jsonData: any[] = jsonData;
   isSidebarOpen: boolean = true;
 
-  constructor(private route: ActivatedRoute, private router: Router) {
-    
+  user:any;
+  constructor(private route: ActivatedRoute, private router: Router, private userService:EmployeeDataService ) {
+      userService.getUserData().subscribe((data) => {
+        this.user = data;
+      })
   }
 
   alluser: any;

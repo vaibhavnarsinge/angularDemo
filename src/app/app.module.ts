@@ -7,12 +7,12 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule} from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { LoginAppComponent } from './login-app/login-app.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import { ReactiveFormsModule} from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 import { AddemployeeComponent } from './addemployee/addemployee.component';
 
 @NgModule({

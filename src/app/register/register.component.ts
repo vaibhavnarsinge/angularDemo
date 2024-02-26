@@ -34,13 +34,13 @@ export class RegisterComponent {
   }
 
   OnSubmit() {
-    this.submitted = true;
-
     if (this.loginform.invalid) {
+      alert("All fields are compulosory");
       return;
     }
-    alert("Register successfull");
-
+    this.submitted = true;
+      alert("Register successfull");
+       this.router.navigate(['/login']);
     
     this.allRegUser.push(this.loginobj);
     localStorage.setItem('allRegUser',JSON.stringify(this.loginobj)); 

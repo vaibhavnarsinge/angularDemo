@@ -28,7 +28,7 @@
 
 .inputbox input {
     width: 100%;
-    padding: 10px;
+    padding: 5px 10px 5px 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     outline: none;
@@ -61,7 +61,7 @@
 
 button {
     margin-top: 2vh;
-    padding: 14px;
+    padding: 5px 10px 5px 10px;
     width: 100%;
     font-size: 18px;
     font-weight: bold;
@@ -92,6 +92,6 @@ button:hover {
 
 
 .inputbox input:focus {
-    border-color: #007bff; 
+    border-color: #030d28; 
     box-shadow: 0 0 5px #007bff;
 }

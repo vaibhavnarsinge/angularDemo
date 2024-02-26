@@ -1,0 +1,55 @@
+{
+  "posts": [
+    {
+      "id": "b4fe",
+      "empid": 123,
+      "name": "Rohit Chavan",
+      "email": "rc@gmail.comm",
+      "password": "",
+      "phone": "1236548956",
+      "aadhar": 256395659856,
+      "position": "Developer",
+      "gender": "Male",
+      "jDate": "2023-10-13",
+      "etype": "Full Time",
+      "address": "Pune ",
+      "country": "India",
+      "state": "Shenyang",
+      "city": "Pune"
+    },
+    {
+      "id": "ea83",
+      "empid": "",
+      "name": "",
+      "email": "",
+      "password": "",
+      "phone": "",
+      "aadhar": "",
+      "position": "",
+      "gender": "",
+      "jDate": "",
+      "etype": "",
+      "address": "",
+      "country": "",
+      "state": "",
+      "city": ""
+    },
+    {
+      "id": "c68e",
+      "empid": "",
+      "name": "",
+      "email": "",
+      "password": "",
+      "phone": "",
+      "aadhar": "",
+      "position": "",
+      "gender": "",
+      "jDate": "",
+      "etype": "",
+      "address": "",
+      "country": "",
+      "state": "",
+      "city": ""
+    }
+  ]
+}

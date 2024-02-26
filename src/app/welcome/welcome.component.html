@@ -17,44 +17,38 @@
       <thead>
         <tr>
           <th>Sr No.</th>
-          <th>Name</th>
+          <th>Emp ID</th>
+          <th style="width: 10vw;">Name</th>
           <th>Email</th>
           <th>Phone No</th>
+          <th>Aadhar No.</th>
+          <th>Position</th>
+          <th>Gender</th>
+          <th>Joining Date</th>
+          <th>Employee Type</th>
           <th>Address</th>
+          <th>Country</th>
+          <th>State</th>
+          <th>City</th>
+
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Data 1</td>
-          <td>Data 2</td>
-          <td>Data 3</td>
-          <td>Data 4</td>
-          <td>Data 5</td>
-        </tr>
-        <tr>
-          <td>
-            <h6>{{ 1 }}</h6>
-          </td>
-          <td>
-            <h6>{{ alluser.user }}</h6>
-          </td>
-          <td>
-            <h6>{{ alluser.email }}</h6>
-          </td>
-          <td>
-            <h6>{{ alluser.phone }}</h6>
-          </td>
-          <td>
-            <h6>{{ alluser.password }}</h6>
-          </td>
-        </tr>
-
-        <tr *ngFor="let item of jsonData; let i = index">
+        <tr *ngFor="let item of user; let i = index">
           <td>{{ i + 1 }}</td>
+          <td>{{ item.empid }}</td>
           <td>{{ item.name }}</td>
           <td>{{ item.email }}</td>
           <td>{{ item.phone }}</td>
+          <td>{{ item.aadhar }}</td>
+          <td>{{ item.position }}</td>
+          <td>{{ item.gender }}</td>
+          <td>{{ item.jDate }}</td>
+          <td>{{ item.etype }}</td>
           <td>{{ item.address }}</td>
+          <td>{{ item.country }}</td>
+          <td>{{ item.state }}</td>
+          <td>{{ item.city }}</td>
         </tr>
       </tbody>
     </table>

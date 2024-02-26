@@ -27,6 +27,7 @@ export class LoginAppComponent {
   ) {}
 
   ngOnInit(): void {
+    debugger
     this.loginform = this.formbuilder.group({
       user: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
@@ -42,7 +43,8 @@ export class LoginAppComponent {
     if (
       this.loginobj.user == this.alluser.email &&
       this.loginobj.password == this.alluser.password
-    ) {
+    ) 
+    {
       this.submitted = true;
       alert('Login successfull');
       this.router.navigate(['/welcome']);
@@ -51,7 +53,9 @@ export class LoginAppComponent {
     }
 
     if (this.loginform.invalid) {
+      alert("Please Enter Credintials")
       return;
+      
     }
   }
 }
