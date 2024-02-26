@@ -10,7 +10,10 @@ import { LoginAppComponent } from './login-app/login-app.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RegisterComponent } from './register/register.component';
-import { HomeComponent } from './home/home.component'
+import { HomeComponent } from './home/home.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import {HttpClientModule} from '@angular/common/http';
+import { AddemployeeComponent } from './addemployee/addemployee.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import { HomeComponent } from './home/home.component'
     HeaderComponent,
     LoginAppComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    WelcomeComponent,
+    AddemployeeComponent
     
   ],
   imports: [
@@ -27,7 +32,8 @@ import { HomeComponent } from './home/home.component'
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
 
   ],
   providers: [],

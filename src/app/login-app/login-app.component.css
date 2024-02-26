@@ -1,123 +1,97 @@
-.forms{
+.forms {
     display: flex;
     justify-content: center;
-    /* margin-top: 25vh; */
-    height: 87vh;
     align-items: center;
-    background-color: #23242a;
+    height: 90vh;
+    background-color: #eeeeee; 
+
 }
 
-
-
-form{
-    /* box-shadow: -1px -1px 4px 3px  rgb(176, 176, 176); */
-    display: flex;
-    margin-top: -100px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 1px;
-    height: 20vw;
-    width: 24vw;
-    border: ridge rgba(255, 255, 255, 0.644) 8px;
+.login-section {
+    background-color: #fffdfd; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
 }
 
-form h3{
-    color:white;
+.login-section h3 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
+.inputbox {
+    position: relative;
+    margin-bottom: 20px;
+}
 
-.link{
-    height: 8vh;
-    margin-top: -15px;
+.inputbox input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    font-size: 16px;
+}
+
+.er span {
+    color: red;
+    font-size: 14px;
+    position: absolute;
+    bottom: -20px;
+}
+
+.forgot-password {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
 }
 
-.link a{
-    font-size: 0.7vw;
+.forgot-password a {
     text-decoration: none;
-    color: rgb(105, 105, 105);
-    margin: 2vw;
+    color: #007bff;
+    font-size: 14px;
+    transition: color 0.3s ease;
 }
 
-.link:hover a{
-    font-size: 0.7vw;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    margin: 2vw;
+.forgot-password a:hover {
+    color: #001d3c;
 }
-.inputBox{
-    position: relative;
+
+button {
+    margin-top: 2vh;
+    padding: 14px;
     width: 100%;
-    margin-top: 35px;
-}
-input{
-    position: relative;
-    width: 100%;
-    margin: 0.6vw;
-    background: transparent;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
     border: none;
-    border: ridge rgba(255, 255, 255, 0.644) 5px;
-    outline: none;
-    color: #dcdeed;
-    font-size: 1em;
-    letter-spacing: 0.05em;
-    z-index: 10;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #0056b3;
 }
 
 
-span{
-    height: 14px;
+.company-section a:hover {
+    background-color: #0056b3;
+}
+
+.er1,.er2{
     position: absolute;
-    background-color: #dcdeed;
+    height: 3vh;
+    margin-top: -20px;
+    margin-left:50px ;
+    color: rgb(157, 0, 0);
+    font-size: 0.8vw;
 }
 
-::placeholder{
-    color: rgb(158, 158, 158);
-    text-align: center;
-    font-size: 0.9vw;
-}
 
-
-button{
-    padding: 0.4vw;
-    width: 68%;
-    font-size: 1vw;
-    font-weight: 600;
-    color: rgb(54, 53, 53);
-    border: none;
-    outline: none;
-    cursor:pointer;
-    border: ridge rgba(255, 255, 255, 0.644) 5px;
-    margin-left: 16px;
-}
-
-.er span{
-    color: red;
-    width: 100px;
-    font-size: 0.7vw;
-    position: absolute;
-    margin-top: -7px;
-    margin-left: 2.4vw;
-    width: 10vw;
-    z-index: 99;
-}
-
-button:focus{
-    border: groove rgba(255, 255, 255, 0.644) 5px;
-}
-
-.userdata{
-
-    bottom: 0;
-    position: fixed;
-}
-.userdata button{
-    padding: 0.5vw;
-    width: 100%;
-    font-size: 1vw;
-    border: none;
-    outline: none;
-    cursor:pointer;
+.inputbox input:focus {
+    border-color: #007bff; 
+    box-shadow: 0 0 5px #007bff;
 }

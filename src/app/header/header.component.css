@@ -1,63 +1,73 @@
-img{
-    width: 6vw;
-    mix-blend-mode: color-;
-}
-.header{
-    height: 13vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: solid rgba(0, 0, 0, 0.514) 2px;
-}
-
-.navlist{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+.header {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e6e6e6;
+  padding: 0 20px 0 0;
+  color: #fff;
+  border-bottom: 1px rgba(0, 0, 0, 0.161) solid;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
 }
 
-.navlist a{
-    margin: 0.5vw;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 1vw
+.header img {
+  width: auto;
+  height: 10vh;
 }
 
-.navlist h1{
-    width: 6vw;
-    margin: 0.5vw;
-    display: flex;
-    justify-content: center;
-    border: solid rgba(0, 0, 0, 0.603) 2px;
-    border-radius: 19px;
-    cursor: pointer;
+.navlist {
+  display: flex;
+  align-items: center;
 }
 
-.navlist h1:nth-child(2) a{
-    color: black;
+.navlist a {
+  text-decoration: none;
+  color: #000000c5;
+  margin: 0 15px;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.navlist h1:nth-child(3) a{
-    color: black;
-
-}
-.navlist h1:nth-child(4) a{
-    color: black;
-
+.navlist a.active,
+.navlist a:hover {
+  background-color: #fff;
+  color: #007bff;
 }
 
-.navlist h1:nth-child(1){
-    background-color: rgb(0, 80, 47);
+.home-link a {
+  color: #575757;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-.navlist h1:nth-child(5){
-    background-color: rgb(148, 0, 0);
+.header:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.navlist h1:nth-child(1):hover{
-    background-color: #009959;
+.company-name {
+  font-family: 'Arial', sans-serif;
+  font-size: 2.3vw;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px;
+  background-color: #00596c;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  animation: pulse 2s infinite alternate;
 }
 
-.navlist h1:nth-child(5):hover{
-    background-color: rgb(255, 2, 2);
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
 }
