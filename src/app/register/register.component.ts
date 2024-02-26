@@ -50,7 +50,7 @@ ngOnInit():void{
 
     
     this.allRegUser.push(this.loginobj);
-    localStorage.setItem('allRegUser',JSON.stringify(this.loginobj)); 
+    localStorage.setItem('allRegUser',JSON.stringify(this.allRegUser)); 
     console.log(this.loginform.value);
   }
 
