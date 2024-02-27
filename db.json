@@ -1,7 +1,7 @@
 {
   "posts": [
     {
-      "id": "8b35",
+      "id": "8b34",
       "empid": 12,
       "name": "Rohit Chavan",
       "email": "Rohit@gmail.com",
@@ -17,7 +17,7 @@
       "city": "Pune"
     },
     {
-      "id": "8b34",
+      "id": "8b87",
       "empid": 12,
       "name": "Rohit Chavan",
       "email": "Rohit@gmail.com",
@@ -31,6 +31,54 @@
       "country": "India",
       "state": "Maharashtra",
       "city": "Pune"
+    },
+    {
+      "id": "8b56",
+      "empid": 12,
+      "name": "Rohit Chavan",
+      "email": "Rohit@gmail.com",
+      "phone": "1236548956",
+      "aadhar": 12111111111111112,
+      "position": "Developer",
+      "gender": "Male",
+      "jDate": "2023-11-16",
+      "etype": "Full Time",
+      "address": "pune",
+      "country": "India",
+      "state": "Maharashtra",
+      "city": "Pune"
+    },
+    {
+      "id": "8b23",
+      "empid": 12,
+      "name": "Rohit Chavan",
+      "email": "Rohit@gmail.com",
+      "phone": "1236548956",
+      "aadhar": 12111111111111112,
+      "position": "Developer",
+      "gender": "Male",
+      "jDate": "2023-11-16",
+      "etype": "Full Time",
+      "address": "pune",
+      "country": "India",
+      "state": "Maharashtra",
+      "city": "Pune"
+    },
+    {
+      "empid": "",
+      "name": "",
+      "email": "",
+      "phone": "",
+      "aadhar": "",
+      "position": "",
+      "gender": "",
+      "jDate": "",
+      "etype": "",
+      "address": "",
+      "country": "",
+      "state": "",
+      "city": "",
+      "id": "x15a-1k"
     }
   ]
 }

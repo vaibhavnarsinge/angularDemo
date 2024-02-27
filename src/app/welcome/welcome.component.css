@@ -1,12 +1,17 @@
-.mainwel {
-  display: flex;
-  min-height: 90vh;
+*{
   font-family: 'Poppins',sans-serif;
+
 
 }
 
+.mainwel {
+  display: flex;
+  min-height: 90vh;
+  width: 100%;
+}
+
 .sidebar {
-  width: 8vw;
+  width: 11%;
   background-color: #cccccc;
   color: #454545;
   padding: 20px;
@@ -53,8 +58,11 @@
 
 
 .dashboard {
-  width: 90vw;
-  background-color: #ffffff;
+  margin-left: 10%;
+  min-height: 89vh;
+  position: fixed;
+  width: 90%;
+  background-color: #f1f5f9;
   padding: 20px;
 }
 
@@ -62,7 +70,7 @@
   position: absolute;
   top: 0;
   background-color: white;
-  margin: 7.8vw 0 0 7vw;
+  margin: 5.7vw 0 0 7vw;
   cursor: pointer;
 }
 
@@ -81,7 +89,8 @@
   }
 
 .sidebar-closed .dashboard {
-    width: 100%;
+  margin-left: 10%;
+    width: 90%;
   }
 
 
@@ -99,10 +108,11 @@
     border:2px solid #cfcfcf;
     text-align: left;
     padding: 0 5px 0 5px;
+    white-space: nowrap;
   }
   
   .custom-table th {
-    background-color: #ffffff;
+    background-color: transparent;
     text-align: center;
     font-size: 1vw;
     padding: 1vw 0.3vw;

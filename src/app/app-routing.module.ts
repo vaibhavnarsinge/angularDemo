@@ -5,6 +5,7 @@ import { LoginAppComponent } from './login-app/login-app.component';
 import { HomeComponent } from './home/home.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AddemployeeComponent } from './addemployee/addemployee.component';
+import { HeaderComponent } from './header/header.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path:'addemployee',
     component:AddemployeeComponent
+  },
+  {
+    path:"header",
+    component:HeaderComponent
   }
 
 ];

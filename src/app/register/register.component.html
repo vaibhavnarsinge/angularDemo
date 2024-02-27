@@ -3,7 +3,7 @@
    <div class="reg-section">
     <form [formGroup]="loginform" (ngSubmit)="OnSubmit()">
        
-        <h3>Registeration </h3>
+        <h3>Create Account </h3>
 
         <div class="inputbox">
             <input type="text" [ngClass]="{'is-invalid':submitted && loginform.get('name')?.errors}"  formControlName="name" placeholder="Enter Name"   [(ngModel)]="loginobj.user"/>  

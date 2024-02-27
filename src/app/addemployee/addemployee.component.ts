@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { EmployeeDataService } from '../services/employee-data.service';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 
@@ -17,7 +18,8 @@ export class AddemployeeComponent {
   submitted: boolean = false;
 
   addEmpForm!: FormGroup;
-    constructor( private userService:EmployeeDataService,  private formbuilder: FormBuilder ) {
+    constructor( private userService:EmployeeDataService,private route: ActivatedRoute,
+      private router: Router,  private formbuilder: FormBuilder ) {
       
     }
 
@@ -40,10 +42,13 @@ export class AddemployeeComponent {
     }
 
   SaveUserData(addEmpForm:any){
-    debugger
-    this.userService.saveUserData(this.addEmpForm.value).subscribe((result) =>{
+    this.submitted = true;
+  if (this.addEmpForm.valid) {
+    this.userService.saveUserData(this.addEmpForm.value).subscribe((result) => {
       console.log(result);
+      alert("Employee Added Successfully");
+      this.router.navigate(['/welcome']);
     });
-    alert("Employee Added Sucessfully")
   }
+}
 }
