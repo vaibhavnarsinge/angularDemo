@@ -5,7 +5,6 @@
     justify-content: top;
     align-items: center;
     margin-top: 10px;
-
     flex-direction: column;
 }
 .form{
@@ -14,7 +13,7 @@
     /* padding: 10px; */
     display: flex;
     flex-wrap: wrap;
-    width: 66vw;
+    width: 70vw;
 }
 
 .form .input-box{

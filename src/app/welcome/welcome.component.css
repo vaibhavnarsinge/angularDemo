@@ -1,10 +1,12 @@
 .mainwel {
   display: flex;
   min-height: 90vh;
+  font-family: 'Poppins',sans-serif;
+
 }
 
 .sidebar {
-  width: 13vw;
+  width: 8vw;
   background-color: #cccccc;
   color: #454545;
   padding: 20px;
@@ -13,17 +15,30 @@
 
 .sidebar h2 {
   font-size: 1.5em;
-  margin-bottom: 20px;
 }
 
 .sidebar ul {
+  width: 100%;
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
 .sidebar ul li {
-  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:5vh;
+  margin:10px 0 0 0;
+  width: 8vw;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1),
+  inset -5px -5px 10px #fff;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+}
+.sidebar ul li:hover {
+  box-shadow:  5px 5px 10px rgba(0, 0, 0, 0.1);
+  cursor:pointer  
 }
 
 .sidebar ul li a {
@@ -32,15 +47,14 @@
   font-weight: bold;
   display: block;
   padding: 8px;
+  font-size: 0.9vw;
 }
 
-.sidebar ul li a:hover {
-  background-color: #555;
-}
+
 
 .dashboard {
-  width: 87vw;
-  background-color: #ebebeb;
+  width: 90vw;
+  background-color: #ffffff;
   padding: 20px;
 }
 
@@ -48,7 +62,7 @@
   position: absolute;
   top: 0;
   background-color: white;
-  margin: 6vw 0 0 9vw;
+  margin: 7.8vw 0 0 7vw;
   cursor: pointer;
 }
 
@@ -68,7 +82,6 @@
 
 .sidebar-closed .dashboard {
     width: 100%;
-    padding: 20px;
   }
 
 
@@ -76,23 +89,74 @@
     width: 100%;
     border-collapse: collapse;
   }
-  
-  .custom-table th, .custom-table td {
-    border:2px solid #000000;
+  .custom-table th  {
+    border:2px solid #c5bebe;
+    text-align: left;
+    padding: 0 5px 0 5px;
+  }
+
+   .custom-table td {
+    border:2px solid #cfcfcf;
     text-align: left;
     padding: 0 5px 0 5px;
   }
   
   .custom-table th {
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     text-align: center;
+    font-size: 1vw;
+    padding: 1vw 0.3vw;
+    color: rgb(0, 151, 168);
+    text-transform: capitalize;
+
   }
-  
+  .custom-table tbody tr{
+    height: 50px;
+    width: auto;
+    padding: 1vw 1vw;
+    font-size: 1vw;
+    font-weight: 500;
+
+  }
   .custom-table tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #ffffff;
+  }
+  .custom-table tbody tr:nth-child(odd) {
+    background-color: #d7e0db;
   }
   
   .custom-table tbody tr:hover {
-    background-color: #f2f2f2;
+    background-color: #ffffff;
+  }
+
+
+  table button{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(0, 0, 0, 0.618);
+    border-radius: 20px;
+    outline: none;
+    margin: 0.2vw;
+    width: 4vw;
+    font-size: 0.9vw;
+    cursor: pointer;
+  }
+  table button:nth-child(odd){
+    background-color: #005e65;
+    color: white;
+  }
+  table button:nth-child(even){
+    background-color: #780010;
+    color: white;
+  }
+
+  table button:nth-child(odd):hover{
+    background-color: #b8c3c3;
+    color: #005e65;
+    font-weight: 600;
+  }
+  table button:nth-child(even):hover{
+    background-color: #b8c3c3;
+    color: #780010;
+    font-weight: 600;
   }
   

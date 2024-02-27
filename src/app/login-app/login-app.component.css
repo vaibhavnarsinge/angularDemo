@@ -3,46 +3,67 @@
     justify-content: center;
     align-items: center;
     height: 90vh;
-    background-color: rgb(35, 96, 101);
+    background-color: rgb(198, 198, 198);
+    font-family: 'Poppins',sans-serif;
 
 }
 
 .login-section {
-    background-color:  rgb(2, 114, 136);
-    padding: 20px;
+    background-color:  rgb(255, 255, 255);
+    padding: 2vw;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgb(0, 0, 0);
-    width: 400px;
+    /* box-shadow:  5px 5px 10px rgba(0, 0, 0, 0.1); */
+    box-shadow:  5px 5px 10px rgba(0, 0, 0, 0.1);
+    width: 25vw;
 }
 
 .login-section h3 {
-    text-shadow: 0 0 5px #007bff;
     color: #030d28;
-    font-size: 5vw;
-    
+    font-size: 2vw;
+    margin-top: 0;
     margin-bottom: 20px;
+
+}
+form{
+    width: 22vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
 }
 
 .inputbox {
     position: relative;
+    margin-top:0;
     margin-bottom: 20px;
+    width: 22vw;
 }
 
 .inputbox input {
-    border-color: #030d28; 
-    box-shadow: 0 0 5px #007bff;
+    margin: 0.6vw;
     width: 100%;
-    color: #030d28;
-
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1),
+    inset -5px -5px 10px #fff;
     padding: 5px 10px 5px 10px;
     border-radius: 4px;
     outline: none;
-    font-size: 16px;
+    border: none;
+    font-size: 1.2vw;
 }
+::placeholder{
+    font-size: 0.8vw;
+    color: #001348;
+}
+.inputbox input:focus {
+    border-color: #030d28; 
+    box-shadow: 0 0 5px #007bff;
+}
+
 
 .er span {
     color: red;
-    font-size: 14px;
+    font-size: 1.2vw;
     position: absolute;
     bottom: -20px;
 }
@@ -51,11 +72,15 @@
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 24px;
+    width: 100%;
 }
 
 .forgot-password a {
+    font-size: 0.6vw;
     text-decoration: none;
-    color: #003369;
+    color: #00807a;
     font-size: 14px;
     font-weight: 600;
     transition: color 0.3s ease;
@@ -66,25 +91,25 @@
 }
 
 button {
-    margin-top: 2vh;
-    padding: 5px 10px 5px 10px;
-    width: 100%;
-    font-size: 18px;
-    font-weight: bold;
-    color: #000544;
-    border-color: #030d28; 
-    box-shadow: 0 0 5px #007bff;
-    background-color: rgb(35, 96, 101);
-    border: none;
+    position: relative;
+    margin-top:0;
+    margin-bottom: 20px;
+    margin-left: 24px;
+    width: 22vw;
+    box-shadow:  5px 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 10px 10px 10px;
     border-radius: 4px;
+    outline: none;
+    border: none;
+    font-weight: 600;
+    font-size: 1vw;
+}
+button:hover{
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1),
+    inset -5px -5px 10px #fff;
 }
-button:hover {
-    background-color: #001d3c;
-    color: #767889;
 
-}
 
 
 .company-section a:hover {
@@ -94,14 +119,10 @@ button:hover {
 .er1,.er2{
     position: absolute;
     height: 3vh;
-    margin-top: -20px;
+    margin-top: -50 px;
     margin-left:50px ;
-    color: rgb(157, 0, 0);
-    font-size: 0.8vw;
+    color: rgb(172, 0, 0);
+    font-size: 10px;
 }
 
 
-.inputbox input:focus {
-    border-color: #030d28; 
-    box-shadow: 0 0 5px #007bff;
-}

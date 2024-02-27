@@ -28,7 +28,7 @@ export class LoginAppComponent {
   ) {}
 
   ngOnInit(): void {
-    debugger
+    
     this.loginform = this.formbuilder.group({
       user: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],

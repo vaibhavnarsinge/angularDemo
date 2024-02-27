@@ -26,7 +26,6 @@ export class AddemployeeComponent {
         empid: ['', [Validators.required]],
         name: ['', Validators.required],
         email: ['', Validators.required],
-        password: ['', Validators.required],
         phone: ['', Validators.required],
         aadhar: ['', Validators.required],
         position: ['', Validators.required],
@@ -37,14 +36,11 @@ export class AddemployeeComponent {
         country: ['', Validators.required],
         state: ['', Validators.required],
         city: ['', Validators.required]
-
       });
-  
-     
     }
 
   SaveUserData(addEmpForm:any){
-    
+    debugger
     this.userService.saveUserData(this.addEmpForm.value).subscribe((result) =>{
       console.log(result);
     });

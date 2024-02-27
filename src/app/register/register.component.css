@@ -3,90 +3,123 @@
     justify-content: center;
     align-items: center;
     height: 90vh;
-    background-color: #f2f2f2;
-    padding: 20px;
+    background-color: rgb(198, 198, 198);
+    font-family: 'Poppins',sans-serif;
+
+}
+
+.reg-section{
+    background-color:  rgb(255, 255, 255);
+    padding: 2vw;
+    border-radius: 8px;
+   /* box-shadow:  5px 5px 10px rgba(0, 0, 0, 0.1); */
+   box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1),
+   inset -5px -5px 10px #fff;
+    width: 25vw;
+    height: 55vh;
 }
 
 form {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 400px;
+    width: 22vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 form h3 {
-    color: #333;
-    font-size: 24px;
+    color: #030d28;
+    font-size: 1.8vw;
+    margin-top: 0;
     margin-bottom: 20px;
 }
 
 .inputbox {
     position: relative;
+    margin-top:0;
     margin-bottom: 20px;
+    width: 22vw;
 }
 
 input {
+    margin: 0.2vw;
     width: 100%;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1),
+    inset -5px -5px 10px #fff;
     padding: 5px 10px 5px 10px;
-    border: 1px solid #ccc;
     border-radius: 4px;
     outline: none;
-    font-size: 16px;
+    border: none;
+    font-size: 1.2vw;
+}
+::placeholder{
+    font-size: 0.8vw;
+    color: #001348;
 }
 
 .er span {
-    color: red;
-    font-size: 14px;
     position: absolute;
     bottom: -20px;
 }
 
 .link {
-    margin-top: 20px;
+    margin-top: 0;
+    margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .link a {
+    font-size: 1vw;
     text-decoration: none;
-    color: #007bff;
+    color: #00807a;
     font-size: 14px;
+    font-weight: 600;
     transition: color 0.3s ease;
-    padding: 8px 12px;
-    border-radius: 4px;
 }
 
 .link a:hover {
-    color: #001d3c;
+    color: #2773c5;
+
 }
 
 button {
-    margin-top: 2vh;
-    padding: 5px 10px 5px 10px;
-    width: 100%;
-    font-size: 18px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
+    position: relative;
+    margin-top:0;
+    margin-bottom: 20px;
+    margin-left: 24px;
+    width: 22vw;
+    box-shadow:  5px 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 10px 10px 10px;
     border-radius: 4px;
+    outline: none;
+    border: none;
+    font-weight: 600;
+    font-size: 1vw;
+}
+button:hover{
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1),
+    inset -5px -5px 10px #fff;
 }
 
-button:hover {
-    background-color: #0056b3;
+.link span{
+    font-size: 1vw;
+    color: red;
+    margin-right: 2px;
 }
+
+
+
 
 .er1, .er2, .er3, .er4 {
     position: absolute;
     height: 3vh;
-    margin-top: -20px;
-    margin-left: 50px;
-    color: rgb(157, 0, 0);
-    font-size: 0.8vw;
+    margin-top: -40px;
+    margin-left:50px ;
+    color: rgb(184, 6, 6);
+    font-size: 10px;
 }
 
 .inputbox input:focus {

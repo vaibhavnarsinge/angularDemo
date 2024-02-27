@@ -16,25 +16,43 @@
     <table class="custom-table">
       <thead>
         <tr>
+          <th style="width: 4vw;">Update<br>Delete</th>
           <th>Sr No.</th>
-          <th>Employee ID</th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Password</th>
-          <th>Phone No</th>
-          <th>Aadhar No</th>
-          <th>Position</th>
-          <th>Gender</th>
-          <th>Joining Date</th>
-          <th>Employee Type</th>
-          <th>Address</th>
-          <th>Country</th>
-          <th>State</th>
-          <th>City</th>
+          <th *ngFor="let key of userKeys">{{key}}</th>
         </tr>
       </thead>
       <tbody>
-        <!-- <tr *ngFor="let item of user; let i = index">
+        
+        <tr *ngFor="let item of user; let i = index">
+          <td><div>
+            <button>Delete</button>
+            <button>Update</button>
+          </div></td>
+          <td>{{ i + 1 }}</td>
+          <!-- Dynamically generate table cells -->
+          <td *ngFor="let key of userKeys">{{ item[key] }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <tr *ngFor="let item of user; let i = index">
           <td>{{ i + 1 }}</td>
           <td>{{ item.empid }}</td>
           <td>{{ item.name }}</td>
@@ -50,12 +68,3 @@
           <td>{{ item.state }}</td>
           <td>{{ item.city }}</td>
         </tr> -->
-        <tr *ngFor="let item of user; let i = index">
-          <td>{{ i + 1 }}</td>
-          <!-- Dynamically generate table cells -->
-          <td *ngFor="let key of userKeys">{{ item[key] }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>

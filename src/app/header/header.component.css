@@ -4,12 +4,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to right, white,white, rgb(145, 246, 255));
+  background-color: white;
   padding: 0 20px 0 0;
   color: #fff;
   border-bottom: 1px rgba(0, 0, 0, 0.161) solid;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
+  font-family: 'gilroy',sans-serif;
 }
 
 .header img {
@@ -26,27 +27,37 @@
   align-items: center;
 }
 
+.navlist h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:5vh;
+  width: 5vw;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1),
+  inset -5px -5px 10px #fff;
+  margin: 0 15px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+}
 .navlist a {
+ 
   text-decoration: none;
   color: #002723;
-  margin: 0 15px;
-  font-size: 1.1vw;
-  font-weight: 500;
-  padding: 5px 10px;
-  border-radius: 8px;
+  font-size: 0.9vw;
+  font-weight:600;
   font-weight: bold;
-
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.navlist a.active,
-.navlist a:hover {
-  background-color: #367900;
-  color: #bde7bb;
+.navlist h1.active,
+.navlist h1:hover {
+  box-shadow:  5px 5px 10px rgba(0, 0, 0, 0.1);
+ cursor:pointer
 
 }
 
 .home-link a {
+ 
   color: #5e6b00;
   font-weight: bold;
   transition: color 0.3s ease;

@@ -1,5 +1,6 @@
 <div class="forms">
     
+   <div class="reg-section">
     <form [formGroup]="loginform" (ngSubmit)="OnSubmit()">
        
         <h3>Registeration </h3>
@@ -33,10 +34,11 @@
       
             
         <div class="link">
-            <a href="/login">Login Here</a>
+            <span>Already have an Account?</span><a href="/login">Login Here</a>
         </div>
 
         <button type="submit">Register</button>
 
     </form>
+   </div>
 </div>
