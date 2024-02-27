@@ -25,12 +25,12 @@
         
         <tr *ngFor="let item of user; let i = index">
           <td><div>
-            <button>Delete</button>
-            <button>Update</button>
+            <button (click)="DeleteData(item)">Delete</button>
+            <!-- <button (click)="UpdateData(item)">Update</button> -->
           </div></td>
           <td>{{ i + 1 }}</td>
           <!-- Dynamically generate table cells -->
-          <td *ngFor="let key of userKeys">{{ item[key] }}</td>
+          <td *ngFor="let value of userKeys">{{ item[value] }}</td>
         </tr>
       </tbody>
     </table>

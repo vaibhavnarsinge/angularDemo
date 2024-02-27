@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { EmployeeDataService } from '../services/employee-data.service';
+import { ResourceLoader } from '@angular/compiler';
 
 
 @Component({
@@ -36,4 +37,30 @@ export class WelcomeComponent {
   toggleSidebar() {
     this.isSidebarOpen = !this.isSidebarOpen;
   }
+
+  // UpdateDate(){
+  //     this.userService.saveUserData(this.addEmpForm.value).subscribe((result) =>{
+  //       console.log(result);
+  //     });
+  //     alert("Employee Added Sucessfully")
+  // }
+
+  DeleteData(userD:any){
+    debugger
+      this.userService.deleteUserData(userD.id).subscribe((result) => {
+        console.log(result);
+        alert("User Deleted Successfulyy");
+        window.location.reload();
+      })
+      
+  }
+  // UpdateData(userD:any){
+  //   debugger
+  //     this.userService.deleteUserData(userD.id).subscribe((result) => {
+  //       console.log(result);
+  //       alert("User Deleted Successfulyy");
+  //       window.location.reload();
+  //     })
+      
+  // }
 }

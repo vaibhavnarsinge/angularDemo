@@ -141,11 +141,11 @@
     cursor: pointer;
   }
   table button:nth-child(odd){
-    background-color: #005e65;
+    background-color: #008592;
     color: white;
   }
   table button:nth-child(even){
-    background-color: #780010;
+    background-color: #9d0015;
     color: white;
   }
 
