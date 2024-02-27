@@ -50,6 +50,40 @@
       "country": "",
       "state": "",
       "city": ""
+    },
+    {
+      "empid": 999,
+      "name": "Rohit999",
+      "email": "Rohi999@gmail.com",
+      "password": "",
+      "phone": "9999999999",
+      "aadhar": 999999999999,
+      "position": "Developer",
+      "gender": "Male",
+      "jDate": "2023-09-22",
+      "etype": "Full Time",
+      "address": "Pune India",
+      "country": "India",
+      "state": "Maharashtra",
+      "city": "Pune",
+      "id": "6bkNGYM"
+    },
+    {
+      "empid": 888,
+      "name": "rohit888",
+      "email": "rohit888@gmail.com",
+      "password": "",
+      "phone": "8888888888",
+      "aadhar": 8888888888888,
+      "position": "cloud",
+      "gender": "Female",
+      "jDate": "2023-11-21",
+      "etype": "Full Time",
+      "address": "mumbai",
+      "country": "India",
+      "state": "Maharashtra",
+      "city": "Pune",
+      "id": "0e6yYm8"
     }
   ]
 }

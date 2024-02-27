@@ -1,10 +1,10 @@
 .header {
-  height: 10vh;
+  height: 9vh;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #e6e6e6;
+  background: linear-gradient(to right, white,white, rgb(145, 246, 255));
   padding: 0 20px 0 0;
   color: #fff;
   border-bottom: 1px rgba(0, 0, 0, 0.161) solid;
@@ -13,33 +13,41 @@
 }
 
 .header img {
+  border-radius: 20px;
+  margin: 0.2vw;
   width: auto;
-  height: 10vh;
+  height: 8vh;
 }
 
 .navlist {
+  padding: 12px;
+  height: 5vh;
   display: flex;
   align-items: center;
 }
 
 .navlist a {
   text-decoration: none;
-  color: #000000c5;
+  color: #002723;
   margin: 0 15px;
-  font-size: 18px;
-  padding: 10px 15px;
+  font-size: 1.1vw;
+  font-weight: 500;
+  padding: 5px 10px;
   border-radius: 8px;
+  font-weight: bold;
+
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navlist a.active,
 .navlist a:hover {
-  background-color: #fff;
-  color: #007bff;
+  background-color: #367900;
+  color: #bde7bb;
+
 }
 
 .home-link a {
-  color: #575757;
+  color: #5e6b00;
   font-weight: bold;
   transition: color 0.3s ease;
 }

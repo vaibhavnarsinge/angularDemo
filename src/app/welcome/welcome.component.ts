@@ -9,12 +9,18 @@ import { EmployeeDataService } from '../services/employee-data.service';
   styleUrls: ['./welcome.component.css'],
 })
 export class WelcomeComponent {
+  userKeys: string[] = [];
   isSidebarOpen: boolean = true;
 
   user:any;
   constructor(private route: ActivatedRoute, private router: Router, private userService:EmployeeDataService ) {
       userService.getUserData().subscribe((data) => {
         this.user = data;
+
+        if (this.user.length > 0) {
+          // Get keys from the first item assuming all items have the same structure
+          this.userKeys = Object.keys(this.user[0]).filter(key => key !== 'id'); // Exclude "_id" from keys
+        }
       })
   }
 

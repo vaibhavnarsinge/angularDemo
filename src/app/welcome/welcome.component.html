@@ -17,11 +17,12 @@
       <thead>
         <tr>
           <th>Sr No.</th>
-          <th>Emp ID</th>
-          <th style="width: 10vw;">Name</th>
+          <th>Employee ID</th>
+          <th>Name</th>
           <th>Email</th>
+          <th>Password</th>
           <th>Phone No</th>
-          <th>Aadhar No.</th>
+          <th>Aadhar No</th>
           <th>Position</th>
           <th>Gender</th>
           <th>Joining Date</th>
@@ -30,11 +31,10 @@
           <th>Country</th>
           <th>State</th>
           <th>City</th>
-
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let item of user; let i = index">
+        <!-- <tr *ngFor="let item of user; let i = index">
           <td>{{ i + 1 }}</td>
           <td>{{ item.empid }}</td>
           <td>{{ item.name }}</td>
@@ -49,6 +49,11 @@
           <td>{{ item.country }}</td>
           <td>{{ item.state }}</td>
           <td>{{ item.city }}</td>
+        </tr> -->
+        <tr *ngFor="let item of user; let i = index">
+          <td>{{ i + 1 }}</td>
+          <!-- Dynamically generate table cells -->
+          <td *ngFor="let key of userKeys">{{ item[key] }}</td>
         </tr>
       </tbody>
     </table>

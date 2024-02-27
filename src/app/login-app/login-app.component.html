@@ -5,6 +5,7 @@
             <div class="inputbox">
                 <input type="text" [ngClass]="{'is-invalid':submitted && loginform.get('user')?.errors}" 
                 formControlName="user" placeholder="Enter Username" [(ngModel)]="loginobj.user"/>
+
             </div>
             <div *ngIf="submitted || loginform.get('user')?.invalid && (loginform.get('user')?.dirty || (loginform.get('user')?.touched))">
                 <div class="er1" *ngIf=" loginform.get('user')?.hasError('required')" ><span>Please Enter Correct Email</span></div>
