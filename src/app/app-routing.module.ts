@@ -29,6 +29,10 @@ const routes: Routes = [
     component:AddemployeeComponent
   },
   {
+    path:'addemployee/:id',
+    component:AddemployeeComponent
+  },
+  {
     path:"header",
     component:HeaderComponent
   }

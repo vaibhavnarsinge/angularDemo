@@ -1,10 +1,10 @@
 <div class="employee-form">
     <h3>Add Employee</h3>
-    <form [formGroup]="addEmpForm" class="form" (ngSubmit)="SaveUserData('')">
+    <form [formGroup]="addEmpForm" class="form"  (ngSubmit)="onUpdate()">
        <div>
         <div class="input-box">
             <label for="empid">Employee ID:</label>
-            <input type="number" [ngClass]="{'is-invalid':submitted && addEmpForm.get('empid')?.errors}"  id="empid" name="empid"  formControlName="empid" ngModel placeholder="Employee ID" required>
+            <input type="number"  [ngClass]="{'is-invalid':submitted && addEmpForm.get('empid')?.errors}"    formControlName="empid"  placeholder="Employee ID" required>
         </div>
         <div class="val" *ngIf="submitted || addEmpForm.get('empid')?.invalid && (addEmpForm.get('empid')?.dirty || (addEmpForm.get('empid')?.touched))">
             <div class="er1" *ngIf=" addEmpForm.get('empid')?.hasError('required')" ><span>Please Enter Emp ID</span></div>
@@ -14,7 +14,7 @@
        <div>
         <div class="input-box">
             <label for="name">Name:</label>
-            <input type="text" [ngClass]="{'is-invalid':submitted && addEmpForm.get('name')?.errors}"  id="name" name="name"  formControlName="name" ngModel placeholder="First Name" required>
+            <input type="text" [ngClass]="{'is-invalid':submitted && addEmpForm.get('name')?.errors}"    formControlName="name"  placeholder="First Name" required>
         </div>
         <div class="val" *ngIf="submitted || addEmpForm.get('name')?.invalid && (addEmpForm.get('name')?.dirty || (addEmpForm.get('name')?.touched))">
             <div class="er2" *ngIf=" addEmpForm.get('name')?.hasError('required')" ><span>Please Enter Emp Name</span></div>
@@ -24,7 +24,7 @@
         <div>
             <div class="input-box">
                 <label for="email">Email:</label>
-                <input type="email" [ngClass]="{'is-invalid':submitted && addEmpForm.get('email')?.errors}"  id="email" name="email"  formControlName="email" ngModel placeholder="example@example.com" required>
+                <input type="email" [ngClass]="{'is-invalid':submitted && addEmpForm.get('email')?.errors}"    formControlName="email"  placeholder="example@example.com" required>
             </div>
             <div class="val" *ngIf="submitted || addEmpForm.get('email')?.invalid && (addEmpForm.get('email')?.dirty || (addEmpForm.get('email')?.touched))">
                 <div class="er3" *ngIf=" addEmpForm.get('email')?.hasError('required')" ><span>Please Enter Emp Email</span></div>
@@ -34,7 +34,7 @@
        <div>
         <div class="input-box">
             <label for="phone">Phone:</label>
-            <input type="tel" [ngClass]="{'is-invalid':submitted && addEmpForm.get('phone')?.errors}"  id="phone" name="phone"  formControlName="phone" ngModel placeholder="1236547892" required>
+            <input type="tel" [ngClass]="{'is-invalid':submitted && addEmpForm.get('phone')?.errors}"   formControlName="phone"  placeholder="1236547892" required>
         </div>
         <div class="val" *ngIf="submitted || addEmpForm.get('phone')?.invalid && (addEmpForm.get('phone')?.dirty || (addEmpForm.get('phone')?.touched))">
             <div class="er4" *ngIf=" addEmpForm.get('phone')?.hasError('required')" ><span>Please Enter Emp Phone</span></div>
@@ -44,7 +44,7 @@
        <div>
         <div class="input-box">
             <label for="aadhar">Aadhar No.</label>
-            <input type="number"  [ngClass]="{'is-invalid':submitted && addEmpForm.get('aadhar')?.errors}"  id="aadhar" name="aadhar"  formControlName="aadhar" ngModel placeholder="0000 0000 0000" required>
+            <input type="number"  [ngClass]="{'is-invalid':submitted && addEmpForm.get('aadhar')?.errors}"   formControlName="aadhar"  placeholder="0000 0000 0000" required>
         </div>
         <div class="val" *ngIf="submitted || addEmpForm.get('aadhar')?.invalid && (addEmpForm.get('aadhar')?.dirty || (addEmpForm.get('aadhar')?.touched))">
             <div class="er5" *ngIf=" addEmpForm.get('aadhar')?.hasError('required')" ><span>Please Enter Emp Aadhar</span></div>
@@ -54,7 +54,7 @@
       <div>
         <div class="input-box">
             <label for="position">Position:</label>
-            <input type="text" [ngClass]="{'is-invalid':submitted && addEmpForm.get('position')?.errors}"  id="position" name="position"  formControlName="position" ngModel placeholder="eg. Developer" required>
+            <input type="text" [ngClass]="{'is-invalid':submitted && addEmpForm.get('position')?.errors}"    formControlName="position"  placeholder="eg. Developer" required>
         </div>
         <div class="val" *ngIf="submitted || addEmpForm.get('position')?.invalid && (addEmpForm.get('position')?.dirty || (addEmpForm.get('position')?.touched))">
             <div class="er6" *ngIf=" addEmpForm.get('position')?.hasError('required')" ><span>Please Enter Emp Position</span></div>
@@ -70,7 +70,7 @@
             outline: none;
             font-size: 16px;
             padding: 5px;
-            " name="gender" [ngClass]="{'is-invalid':submitted && addEmpForm.get('gender')?.errors}"   formControlName="gender" ngModel required>
+            "  [ngClass]="{'is-invalid':submitted && addEmpForm.get('gender')?.errors}"   formControlName="gender"  required>
                 <option value="" disabled selected>Select Gender</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
@@ -85,7 +85,7 @@
        <div>
         <div class="input-box">
             <label for="JDate">Joining Date:</label>
-            <input type="date" [ngClass]="{'is-invalid':submitted && addEmpForm.get('jDate')?.errors}"  id="jDate"  formControlName="jDate" name="jDate" ngModel  required>
+            <input type="date" [ngClass]="{'is-invalid':submitted && addEmpForm.get('jDate')?.errors}"    formControlName="jDate" required>
         </div>
         <div class="val" *ngIf="submitted || addEmpForm.get('JDate')?.invalid && (addEmpForm.get('JDate')?.dirty || (addEmpForm.get('JDate')?.touched))">
             <div class="er8" *ngIf=" addEmpForm.get('JDate')?.hasError('required')" ><span>Please Enter Emp Date</span></div>
@@ -101,7 +101,7 @@
             outline: none;
             font-size: 16px;
             padding: 5px;
-            " name="etype" [ngClass]="{'is-invalid':submitted && addEmpForm.get('etype')?.errors}"   formControlName="etype" ngModel required>
+            " name="etype" [ngClass]="{'is-invalid':submitted && addEmpForm.get('etype')?.errors}"   formControlName="etype"  required>
                 <option value="" disabled selected>Please Select</option>
                 <option value="Full Time">Full Time</option>
                 <option value="Part Time">Part Time</option>
@@ -116,7 +116,7 @@
        <div>
         <div class="input-box">
             <label for="address">Address:</label>
-            <textarea id="address" [ngClass]="{'is-invalid':submitted && addEmpForm.get('address')?.errors}"  name="address"  formControlName="address" ngModel placeholder="Address" rows="2" required></textarea>
+            <textarea [ngClass]="{'is-invalid':submitted && addEmpForm.get('address')?.errors}"    formControlName="address"  placeholder="Address" rows="2" required></textarea>
         </div>
         <div class="val" *ngIf="submitted || addEmpForm.get('address')?.invalid && (addEmpForm.get('address')?.dirty || (addEmpForm.get('address')?.touched))">
             <div class="er10" *ngIf=" addEmpForm.get('address')?.hasError('required')" ><span>Please Enter Emp Address</span></div>
@@ -132,7 +132,7 @@
             outline: none;
             font-size: 16px;
             padding: 5px;
-            " name="country" [ngClass]="{'is-invalid':submitted && addEmpForm.get('country')?.errors}"  formControlName="country" ngModel required>
+            " name="country" [ngClass]="{'is-invalid':submitted && addEmpForm.get('country')?.errors}"  formControlName="country"  required>
                 <option value="" selected>Please Select</option>
                 <option value="India" selected>India</option>
                 <option value="China" selected>China</option>
@@ -153,7 +153,7 @@
             outline: none;
             font-size: 16px;
             padding: 5px;
-            " name="state" [ngClass]="{'is-invalid':submitted && addEmpForm.get('state')?.errors}"  formControlName="state" ngModel required>
+            " name="state" [ngClass]="{'is-invalid':submitted && addEmpForm.get('state')?.errors}"  formControlName="state"  required>
                 <option value="" selected>Please Select</option>
                 <option value="Maharashtra" selected>Maharashtra</option>
                 <option value="Karnatak" selected>Karnatak</option>
@@ -178,7 +178,7 @@
             outline: none;
             font-size: 16px;
             padding: 5px;
-            " name="city" [ngClass]="{'is-invalid':submitted && addEmpForm.get('city')?.errors}"  formControlName="city" ngModel required>
+            " name="city" [ngClass]="{'is-invalid':submitted && addEmpForm.get('city')?.errors}"  formControlName="city"  required>
                 <option value="" selected>Please Select</option>
                 <option value="Pune" selected>Pune</option>
                 <option value="Mumbai" selected>Mumbai</option>
@@ -196,7 +196,19 @@
         outline: none;
         font-size: 16px;
         padding: 5px;">Add</button>
+         <button  type="submit" 
+         style=" width: 5vw;
+         border: 1px solid #c52929;
+         border-radius: 4px;
+         outline: none;
+         font-size: 16px;
+         margin-left:20px;
+         padding: 5px;">Update</button>
+        
     </form>
+   
+
+    
   
 </div>
 
@@ -207,7 +219,7 @@
 
 
 <!-- 
-
+(ngSubmit)="SaveUserData('')"
 <div class="employee-form">
     <h3>Add Employee</h3>
     <form class="form" #addEmp="ngForm" (ngSubmit)="SaveUserData(addEmp.value)">

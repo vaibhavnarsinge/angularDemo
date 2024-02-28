@@ -13,33 +13,78 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 
 export class AddemployeeComponent {
-
-
   submitted: boolean = false;
+  employee:any;
 
   addEmpForm!: FormGroup;
     constructor( private userService:EmployeeDataService,private route: ActivatedRoute,
-      private router: Router,  private formbuilder: FormBuilder ) {
-      
-    }
+      private router: Router,  private formbuilder: FormBuilder ) {}
 
     ngOnInit(): void {
+    
+      this.userService.getSelectedEmp().subscribe((employee) => {
+        this.employee = employee;
+        this.initialiForm();
+      })  
+
+      this.route.params.subscribe(params => {
+        
+        const id = params['id'];
+      })   
+    }
+
+    initialiForm(): void{
+    
       this.addEmpForm = this.formbuilder.group({
-        empid: ['', [Validators.required]],
-        name: ['', Validators.required],
-        email: ['', Validators.required],
-        phone: ['', Validators.required],
-        aadhar: ['', Validators.required],
-        position: ['', Validators.required],
-        gender: ['', Validators.required],
-        jDate: ['', Validators.required],
-        etype: ['', Validators.required],
-        address: ['', Validators.required],
-        country: ['', Validators.required],
-        state: ['', Validators.required],
-        city: ['', Validators.required]
+        empid: [this.employee.empid,Validators.required],
+        name: [this.employee.name,Validators.required],
+        email: [this.employee.email,Validators.required],
+        phone: [this.employee.phone,Validators.required],
+        aadhar: [this.employee.aadhar,Validators.required],
+        position: [this.employee.position,Validators.required],
+        gender:[this.employee.gender,Validators.required],
+        jDate:[this.employee.jDate,Validators.required],
+        etype:[this.employee.etype,Validators.required],
+        address: [this.employee.address,Validators.required],
+        country: [this.employee.country,Validators.required],
+        state:[this.employee.state,Validators.required],
+        city:[this.employee.city,Validators.required]
       });
     }
+
+
+
+      // this.addEmpForm = this.formbuilder.group({
+      //   empid: ['', [Validators.required]],
+      //   name: ['', Validators.required],
+      //   email: ['', Validators.required],
+      //   phone: ['', Validators.required],
+      //   aadhar: ['', Validators.required],
+      //   position: ['', Validators.required],
+      //   gender: ['', Validators.required],
+      //   jDate: ['', Validators.required],
+      //   etype: ['', Validators.required],
+      //   address: ['', Validators.required],
+      //   country: ['', Validators.required],
+      //   state: ['', Validators.required],
+      //   city: ['', Validators.required]
+      // });
+
+
+  onUpdate():void{
+    debugger
+    const FormValue = this.addEmpForm.value;
+
+
+    this.userService.updateUserData(this.employee.id,FormValue).subscribe((result) => {
+      console.log(result);
+      alert("Employee updated Successfully");
+    });
+
+  }
+
+     
+    
 
   SaveUserData(addEmpForm:any){
     this.submitted = true;
@@ -51,4 +96,8 @@ export class AddemployeeComponent {
     });
   }
 }
+
+
+
+
 }
