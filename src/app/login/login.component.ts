@@ -1,3 +1,7 @@
+// git push origin new-way-1
+// git pull origin new-way-1
+
+
 import { Component, Input } from '@angular/core';
 
 @Component({

@@ -2,29 +2,36 @@
   <div class="sidebar">
     <h2>Menu</h2>
     <ul>
-      <li><a routerLink="/welcome">-Dashboard</a></li>
-      <li><a routerLink="/addemployee">-Add Employee</a></li>
+      <li><a routerLink="/welcome">Dashboard</a></li>
+      <li><a routerLink="/addemployee">Add Employee</a></li>
     </ul>
 
     <div class="icn" (click)="toggleSidebar()">
       <img src="../../assets/menu-regular-24.png" alt="" class="src" />
     </div>
+
+  </div>
+  <h3>Dashboard</h3>
+  <div class="logout-container">
+    <h3>{{alluser.email}}</h3>
+    <button class="logout-btn" (click)="onLogout()">
+      Logout
+    </button>
   </div>
   <div class="dashboard">
-    <h2>Dashboard</h2>
-
-    <table class="custom-table">
+    <div class="table-container">
+      <table class="custom-table">
       <thead>
         <tr>
-          <th style="width: 4vw;">Update<br>Delete</th>
-          <th>Sr No.</th>
+          <th >Update<br>Delete</th>
+          <th >Sr No.</th>
           <th *ngFor="let key of userKeys">{{key}}</th>
         </tr>
       </thead>
       <tbody>
         
         <tr *ngFor="let item of user; let i = index">
-          <td><div>
+          <td><div class="btn">
             <button (click)="DeleteData(item)">Delete</button>
             <button (click)="UpdateData(item)">Update</button>
           </div></td>
@@ -33,7 +40,8 @@
           <td *ngFor="let value of userKeys">{{ item[value] }}</td>
         </tr>
       </tbody>
-    </table>
+      </table>
+    </div>
   </div>
 </div>
 

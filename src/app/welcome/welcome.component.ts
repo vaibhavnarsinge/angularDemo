@@ -29,9 +29,11 @@ export class WelcomeComponent {
   alluser: any;
 
   ngOnInit(): void {
+    debugger
     const localData = localStorage.getItem('allRegUser');
     if (localData != null) {
       this.alluser = JSON.parse(localData);
+      this.alluser.email;
     }
   }
 
@@ -41,6 +43,7 @@ export class WelcomeComponent {
 
 
   DeleteData(userD:any){
+    alert("Are you sure you want to delete this entry?")
 
       this.userService.deleteUserData(userD.id).subscribe((result) => {
         console.log(result);
@@ -59,6 +62,11 @@ export class WelcomeComponent {
  
     this.userService.setSelectedUser(userD);
     this.router.navigate(['/addemployee',userD.id]);
+  }
+
+  onLogout(){
+    alert("Do you want to Logout!");
+    this.router.navigate(['/login']);
   }
 
 }
