@@ -34,7 +34,7 @@
   align-items: center;
   height: 5vh;
   width: 7vw;
-  box-shadow: inset 5px 3px 6px rgba(0, 0, 0, 0.1), inset -1px -1px 10px #fff;
+  box-shadow: 5px 3px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   margin: 10px 1vw;
   background-color: #79dbe8;

@@ -1,6 +1,7 @@
 {
   "posts": [
     {
+      "id": "a69a",
       "empid": 12,
       "name": "vaibhav narsinge",
       "email": "vaibhavnarsinge321@gmail.com",
@@ -13,8 +14,23 @@
       "address": "punePune",
       "country": "India",
       "state": "Maharashtra",
+      "city": "Pune"
+    },
+    {
+      "empid": 123,
+      "name": "Swaraj Shindhe",
+      "email": "Tejas@gmail.com",
+      "phone": "5874596854",
+      "aadhar": 857458965478,
+      "position": "Developer",
+      "gender": "Male",
+      "jDate": "2023-11-23",
+      "etype": "Full Time",
+      "address": "Pune",
+      "country": "India",
+      "state": "Maharashtra",
       "city": "Pune",
-      "id": 1
+      "id": "05b2"
     }
   ]
 }

@@ -52,11 +52,7 @@ export class WelcomeComponent {
       })
       
   }
-  // UpdateData(userD:any){
-  //   debugger
-  //   this.userService.updateUserData(userD);
-  //   alert(" updated Successfulyy");
-  // }
+
 
   UpdateData(userD: any) :void{
  
