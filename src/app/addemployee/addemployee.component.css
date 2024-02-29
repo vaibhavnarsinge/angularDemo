@@ -7,13 +7,21 @@
     margin-top: 10px;
     flex-direction: column;
 }
+
+.employee-form h3{
+    position: absolute;
+    left: 0;
+    margin-left: 4vw;
+}
 .form{
-    background-color: rgb(227, 227, 227);
-    height: 73vh;
+    border: 1px solid rgba(0, 0, 0, 0.609);
+
+    background-color: rgb(209, 209, 209);
+    height: 74vh;
     /* padding: 10px; */
     display: flex;
     flex-wrap: wrap;
-    width: 70vw;
+    width: 67vw;
 }
 
 .form .input-box{
@@ -26,14 +34,26 @@
     display: flex;
     flex-direction: column;
 }
-input {
+.input-box input {
     width: 20vw;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.25rem;
+    border: 1px solid rgba(0, 0, 0, 0.609);
     outline: none;
-    font-size: 16px;
-    padding: 5px;
-
+    background-color: #f1f5f9;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    color: #121212;
+}
+select{
+    border: 1px solid rgba(0, 0, 0, 0.609);
+    width: 20vw;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.25rem;
+    border: none;
+    outline: none;
+    background-color: #f1f5f9;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    color: #121212;
 }
 .val{
     height: 0;
@@ -42,12 +62,11 @@ input {
 }
 
 label{
-    width: 19vw;
+    padding: 0 0 4px 0;
+    width: 20vw;
+    font-size: 1vw;
 }
-input:focus {
-    border-color: #007bff; 
-    box-shadow: 0 0 5px #007bff;
-}
+
 textarea {
     width: 20vw;
     background-color: rgb(198, 255, 255);
@@ -56,12 +75,10 @@ textarea {
     outline: none;
     font-size: 16px;
     padding: 0 5px 0 5px;
-
 }
 
 button {
-    
-    margin: 74vh 0 0 65vh;
+    margin: 75vh 0 0 65vh;
     position:absolute;
     padding: 1rem 1.25rem;
     border-radius: 0.25rem;

@@ -28,7 +28,7 @@ export class RegisterComponent {
     this.loginform = this.formbuilder.group({
       name: ['', [Validators.required]],
       phone: ['', Validators.required],
-      email: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
     });
   }

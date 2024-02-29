@@ -51,6 +51,16 @@
         </div>
        </div>
 
+       <div>
+        <div class="input-box">
+            <label for="age">Age</label>
+            <input type="number"  [ngClass]="{'is-invalid':submitted && addEmpForm.get('age')?.errors}"   formControlName="age"  placeholder="23" required>
+        </div>
+        <div class="val" *ngIf="submitted || addEmpForm.get('age')?.invalid && (addEmpForm.get('age')?.dirty || (addEmpForm.get('age')?.touched))">
+            <div class="er5" *ngIf=" addEmpForm.get('age')?.hasError('required')" ><span>Please Enter Emp Aadhar</span></div>
+        </div>
+       </div>
+
       <div>
         <div class="input-box">
             <label for="position">Position:</label>
@@ -64,13 +74,7 @@
        <div>
         <div class="input-box">
             <label for="gender">Gender:</label>
-            <select id="gender" style=" width: 21vw;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            outline: none;
-            font-size: 16px;
-            padding: 5px;
-            "  [ngClass]="{'is-invalid':submitted && addEmpForm.get('gender')?.errors}"   formControlName="gender"  required>
+            <select id="gender"  [ngClass]="{'is-invalid':submitted && addEmpForm.get('gender')?.errors}"   formControlName="gender"  required>
                 <option value="" disabled selected>Select Gender</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
@@ -81,6 +85,30 @@
             <div class="er7" *ngIf=" addEmpForm.get('gender')?.hasError('required')" ><span>Please Enter Emp Gender</span></div>
         </div>
        </div>
+
+       <div>
+        <div class="input-box">
+            <label for="bggrp">Blood Group</label>
+            <select id="bggrp"  [ngClass]="{'is-invalid':submitted && addEmpForm.get('bggrp')?.errors}"   formControlName="bggrp"  required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="A+">A+</option>
+                <option value="B+">B+</option>
+                <option value="AB+">AB+</option>
+                <option value="O+">O+</option>
+                <option value="A-">A-</option>
+                <option value="B-">B-</option>
+                <option value="AB-">AB-</option>
+                <option value="O-">O-</option>
+            </select>
+        </div>
+        <div class="val" *ngIf="submitted || addEmpForm.get('bggrp')?.invalid && (addEmpForm.get('bggrp')?.dirty || (addEmpForm.get('bggrp')?.touched))">
+            <div class="er7" *ngIf=" addEmpForm.get('bggrp')?.hasError('required')" ><span>Please Enter Emp Gender</span></div>
+        </div>
+       </div>
+
+
+
+
 
        <div>
         <div class="input-box">
@@ -95,13 +123,7 @@
       <div>
         <div class="input-box">
             <label for="etype">Employment Type:</label>
-            <select id="etype" style="width: 21vw;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            outline: none;
-            font-size: 16px;
-            padding: 5px;
-            " name="etype" [ngClass]="{'is-invalid':submitted && addEmpForm.get('etype')?.errors}"   formControlName="etype"  required>
+            <select id="etype"  name="etype" [ngClass]="{'is-invalid':submitted && addEmpForm.get('etype')?.errors}"   formControlName="etype"  required>
                 <option value="" disabled selected>Please Select</option>
                 <option value="Full Time">Full Time</option>
                 <option value="Part Time">Part Time</option>
@@ -126,13 +148,7 @@
        <div>
         <div class="input-box">
             <label for="country">Country</label>
-            <select id="country" style=" width: 21vw;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            outline: none;
-            font-size: 16px;
-            padding: 5px;
-            " name="country" [ngClass]="{'is-invalid':submitted && addEmpForm.get('country')?.errors}"  formControlName="country"  required>
+            <select id="country" name="country" [ngClass]="{'is-invalid':submitted && addEmpForm.get('country')?.errors}"  formControlName="country"  required>
                 <option value="" selected>Please Select</option>
                 <option value="India" selected>India</option>
                 <option value="China" selected>China</option>
@@ -147,13 +163,7 @@
        <div>
         <div class="input-box">
             <label for="state">State</label>
-            <select id="state" style=" width: 21vw;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            outline: none;
-            font-size: 16px;
-            padding: 5px;
-            " name="state" [ngClass]="{'is-invalid':submitted && addEmpForm.get('state')?.errors}"  formControlName="state"  required>
+            <select id="state" name="state" [ngClass]="{'is-invalid':submitted && addEmpForm.get('state')?.errors}"  formControlName="state"  required>
                 <option value="" selected>Please Select</option>
                 <option value="Maharashtra" selected>Maharashtra</option>
                 <option value="Karnatak" selected>Karnatak</option>
@@ -172,13 +182,7 @@
        <div>
         <div class="input-box">
             <label for="city">City</label>
-            <select id="city" style="width: 21vw;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            outline: none;
-            font-size: 16px;
-            padding: 5px;
-            " name="city" [ngClass]="{'is-invalid':submitted && addEmpForm.get('city')?.errors}"  formControlName="city"  required>
+            <select id="city"  name="city" [ngClass]="{'is-invalid':submitted && addEmpForm.get('city')?.errors}"  formControlName="city"  required>
                 <option value="" selected>Please Select</option>
                 <option value="Pune" selected>Pune</option>
                 <option value="Mumbai" selected>Mumbai</option>
@@ -195,7 +199,7 @@
         border-radius: 4px;
         outline: none;
         font-size: 16px;
-        padding: 5px;"  (click)="SaveUserData()">Add</button>
+        padding: 5px;" *ngIf="!showAddButton" (click)="SaveUserData()">Add</button>
          <button  type="submit" 
          style=" width: 5vw;
          border: 1px solid #c52929;
@@ -203,13 +207,9 @@
          outline: none;
          font-size: 16px;
          margin-left:20px;
-         padding: 5px;"  (click)="onUpdate()">Update</button>
+         padding: 5px;" *ngIf="showAddButton" (click)="onUpdate()">Update</button>
         
-    </form>
-   
-
-    
-  
+    </form>  
 </div>
 
 

@@ -55,12 +55,15 @@ form {
 
 .link {
     display: flex;
-    justify-content: space-between;
     margin-top: 2rem;
+    padding: 0 0 1vw 0;
 }
+.link span{
+    font-size: 0.9vw;
 
+}
 .link a {
-    font-size: 0.9rem;
+    font-size: 0.9vw;
     text-decoration: none;
     color: #1a73e8;
     font-weight: 600;
