@@ -16,9 +16,10 @@
             <label for="name">Name:</label>
             <input type="text" [ngClass]="{'is-invalid':submitted && addEmpForm.get('name')?.errors}"    formControlName="name"  placeholder="First Name" required>
         </div>
-        <div class="val" *ngIf="submitted || addEmpForm.get('name')?.invalid && (addEmpForm.get('name')?.dirty || (addEmpForm.get('name')?.touched))">
-            <div class="er2" *ngIf=" addEmpForm.get('name')?.hasError('required')" ><span>Please Enter Emp Name</span></div>
-        </div>
+        <div *ngIf="submitted || addEmpForm.get('name')?.invalid && (addEmpForm.get('name')?.dirty || (addEmpForm.get('name')?.touched))">
+            <div class="er1" *ngIf=" addEmpForm.get('name')?.hasError('required')" ><span >Please Enter Correct Name</span></div>
+            <div class="er1" *ngIf=" addEmpForm.get('name')?.hasError('pattern')" ><span >Please Enter Alphabets only</span></div>
+        </div>  
        </div>
         
         <div>
@@ -34,7 +35,7 @@
        <div>
         <div class="input-box">
             <label for="phone">Phone:</label>
-            <input type="tel" [ngClass]="{'is-invalid':submitted && addEmpForm.get('phone')?.errors}"   formControlName="phone"  placeholder="1236547892" required>
+            <input type="tel" maxlength="10" [ngClass]="{'is-invalid':submitted && addEmpForm.get('phone')?.errors}"   formControlName="phone"  placeholder="1236547892" required>
         </div>
         <div class="val" *ngIf="submitted || addEmpForm.get('phone')?.invalid && (addEmpForm.get('phone')?.dirty || (addEmpForm.get('phone')?.touched))">
             <div class="er4" *ngIf=" addEmpForm.get('phone')?.hasError('required')" ><span>Please Enter Emp Phone</span></div>
@@ -44,7 +45,7 @@
        <div>
         <div class="input-box">
             <label for="aadhar">Aadhar No.</label>
-            <input type="number"  [ngClass]="{'is-invalid':submitted && addEmpForm.get('aadhar')?.errors}"   formControlName="aadhar"  placeholder="0000 0000 0000" required>
+            <input type="number" maxlength="12"  [ngClass]="{'is-invalid':submitted && addEmpForm.get('aadhar')?.errors}"   formControlName="aadhar"  placeholder="0000 0000 0000" required>
         </div>
         <div class="val" *ngIf="submitted || addEmpForm.get('aadhar')?.invalid && (addEmpForm.get('aadhar')?.dirty || (addEmpForm.get('aadhar')?.touched))">
             <div class="er5" *ngIf=" addEmpForm.get('aadhar')?.hasError('required')" ><span>Please Enter Emp Aadhar</span></div>
@@ -54,7 +55,7 @@
        <div>
         <div class="input-box">
             <label for="age">Age</label>
-            <input type="number"  [ngClass]="{'is-invalid':submitted && addEmpForm.get('age')?.errors}"   formControlName="age"  placeholder="23" required>
+            <input type="number" maxlength="2"  [ngClass]="{'is-invalid':submitted && addEmpForm.get('age')?.errors}"   formControlName="age"  placeholder="23" required>
         </div>
         <div class="val" *ngIf="submitted || addEmpForm.get('age')?.invalid && (addEmpForm.get('age')?.dirty || (addEmpForm.get('age')?.touched))">
             <div class="er5" *ngIf=" addEmpForm.get('age')?.hasError('required')" ><span>Please Enter Emp Aadhar</span></div>

@@ -49,12 +49,6 @@ export class EmployeeDataService {
     return this.http.delete<number>(this.url+"/"+bookid);
   }
 
-//   updateUser(user: any) {
-//     const userIndex = this.userList.findIndex(x => x.id == user.id);
-//     if (userIndex != null && userIndex != undefined) {
-//         this.userList[userIndex] = user;
-//     }
-// }
 
 
 }

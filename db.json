@@ -1,21 +1,12 @@
 {
   "posts": [
     {
-<<<<<<< HEAD
-      "id": "a69a",
-      "empid": 12,
-      "name": "vaibhav narsinge",
-      "email": "vaibhavnarsinge321@gmail.com",
-      "phone": "7028704745",
-      "aadhar": 125469856562,
-=======
       "empid": 123,
       "name": "Vaibhav Narsinge",
       "email": "Vaibhavnarsinge321@gmail.com",
       "phone": "1256489756",
       "aadhar": 5874596315486,
       "age": 22,
->>>>>>> 1c93ff318cb22ba511852293d78a2c7339f021a8
       "position": "Developer",
       "gender": "Male",
       "bggrp": "Male",
@@ -23,26 +14,6 @@
       "etype": "Full Time",
       "address": "Pune",
       "country": "India",
-<<<<<<< HEAD
-      "state": "Maharashtra",
-      "city": "Pune"
-    },
-    {
-      "empid": 123,
-      "name": "Swaraj Shindhe",
-      "email": "Tejas@gmail.com",
-      "phone": "5874596854",
-      "aadhar": 857458965478,
-      "position": "Developer",
-      "gender": "Male",
-      "jDate": "2023-11-23",
-      "etype": "Full Time",
-      "address": "Pune",
-      "country": "India",
-      "state": "Maharashtra",
-      "city": "Pune",
-      "id": "05b2"
-=======
       "state": "Meghalaya",
       "city": "Pune",
       "id": 1
@@ -64,7 +35,6 @@
       "state": "Shijiazhuang",
       "city": "Pune",
       "id": 2
->>>>>>> 1c93ff318cb22ba511852293d78a2c7339f021a8
     }
   ]
 }

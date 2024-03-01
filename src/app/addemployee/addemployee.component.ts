@@ -59,7 +59,7 @@ export class AddemployeeComponent {
       // Initialize the form with empty values or default values
       this.addEmpForm = this.formbuilder.group({
         empid: ['', Validators.required],
-        name: ['', Validators.required],
+        name: ['', [Validators.required, Validators.pattern('^[a-zA-Z]+$')]],
         email: ['', Validators.required],
         phone: ['', Validators.required],
         aadhar: ['', Validators.required],

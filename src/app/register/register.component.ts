@@ -25,11 +25,12 @@ export class RegisterComponent {
   ) {}
 
   ngOnInit(): void {
+
     this.loginform = this.formbuilder.group({
-      name: ['', [Validators.required]],
-      phone: ['', Validators.required],
+      name: ['', [Validators.required, Validators.pattern('^[a-zA-Z]+$')]],
+      phone: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required],
+      password: ['', [Validators.required,Validators.minLength(8)]],
     });
   }
 

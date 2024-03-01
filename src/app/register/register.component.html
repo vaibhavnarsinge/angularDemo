@@ -10,6 +10,7 @@
         </div>
         <div *ngIf="submitted || loginform.get('name')?.invalid && (loginform.get('name')?.dirty || (loginform.get('name')?.touched))">
             <div class="er1" *ngIf=" loginform.get('name')?.hasError('required')" ><span >Please Enter Correct Name</span></div>
+            <div class="er1" *ngIf=" loginform.get('name')?.hasError('pattern')" ><span >Please Enter Alphabets only</span></div>
         </div>  
         <div class="inputbox">
             <input type="tel" maxlength="10" [ngClass]="{'is-invalid':submitted && loginform.get('phone')?.errors}"  formControlName="phone" placeholder="Enter Phone No."   [(ngModel)]="loginobj.phone"/>  
@@ -28,7 +29,7 @@
         </div>
         <div *ngIf="submitted || loginform.get('password')?.invalid && (loginform.get('password')?.dirty || (loginform.get('password')?.touched))">
             <div class="er4" *ngIf=" loginform.get('password')?.hasError('required')" ><span>Please Enter Correct Password</span></div>
-
+            <div class="er4" *ngIf=" loginform.get('password')?.hasError('minlength')" ><span>  Password must be at least 8 characters long.</span></div>
         </div>
         
       
