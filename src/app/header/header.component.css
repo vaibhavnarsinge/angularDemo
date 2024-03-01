@@ -4,17 +4,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f9f9f9;
-  padding: 0 20px 0 0;
+  background-color: #ffffff;
+  padding: 10px 20px 0 0;
   color: #fff;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.161);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .header img {
-  border-radius: 20px;
   margin: 0.2vw;
   width: auto;
   height: 8vh;
@@ -34,16 +32,20 @@
   align-items: center;
   height: 5vh;
   width: 7vw;
-  box-shadow: 5px 3px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 5px 3px 6px rgba(0, 0, 0, 0.1), inset -1px -1px 10px #fff;
   border-radius: 8px;
   margin: 10px 1vw;
-  background-color: #79dbe8;
+  background-color: #ffffff;
 }
+
+.navlist h1:nth-child(5) {
+  background-color: rgb(0, 142, 194);
+  }
 
 .navlist a {
   text-decoration: none;
   color: #004049;
-  font-size: 1vw;
+  font-size: 0.8vw;
   font-weight: 600;
   transition: background-color 0.3s ease, color 0.3s ease;
 }

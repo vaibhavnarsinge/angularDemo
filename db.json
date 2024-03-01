@@ -1,18 +1,29 @@
 {
   "posts": [
     {
+<<<<<<< HEAD
       "id": "a69a",
       "empid": 12,
       "name": "vaibhav narsinge",
       "email": "vaibhavnarsinge321@gmail.com",
       "phone": "7028704745",
       "aadhar": 125469856562,
+=======
+      "empid": 123,
+      "name": "Vaibhav Narsinge",
+      "email": "Vaibhavnarsinge321@gmail.com",
+      "phone": "1256489756",
+      "aadhar": 5874596315486,
+      "age": 22,
+>>>>>>> 1c93ff318cb22ba511852293d78a2c7339f021a8
       "position": "Developer",
       "gender": "Male",
-      "jDate": "2023-11-10",
+      "bggrp": "Male",
+      "jDate": "2024-01-05",
       "etype": "Full Time",
-      "address": "punePune",
+      "address": "Pune",
       "country": "India",
+<<<<<<< HEAD
       "state": "Maharashtra",
       "city": "Pune"
     },
@@ -31,6 +42,29 @@
       "state": "Maharashtra",
       "city": "Pune",
       "id": "05b2"
+=======
+      "state": "Meghalaya",
+      "city": "Pune",
+      "id": 1
+    },
+    {
+      "empid": 122,
+      "name": "Sagar Thorat",
+      "email": "Sagar@gmail.com",
+      "phone": "1278546985",
+      "aadhar": 854785695145,
+      "age": 56,
+      "position": "cloud Engineer",
+      "gender": "Male",
+      "bggrp": "A+",
+      "jDate": "2023-12-08",
+      "etype": "Full Time",
+      "address": "Pune",
+      "country": "India",
+      "state": "Shijiazhuang",
+      "city": "Pune",
+      "id": 2
+>>>>>>> 1c93ff318cb22ba511852293d78a2c7339f021a8
     }
   ]
 }

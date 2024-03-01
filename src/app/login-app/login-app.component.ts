@@ -52,14 +52,13 @@ export class LoginAppComponent {
       this.submitted = true;
       alert('Login successfull');
       this.router.navigate(['/welcome']);
-    } else {
-      alert('invalid details');
-    }
-
-    if (this.loginform.invalid) {
+    } 
+    else if (this.loginform.invalid) {
       alert("Please Enter Credintials")
       return;
-      
+    }
+    else {
+      alert('invalid details');
     }
   }
 }

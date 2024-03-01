@@ -4,7 +4,6 @@
     align-items: center;
     height: 90vh;
     background-color: #f1f5f9;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .login-section {
@@ -60,7 +59,8 @@ form {
 }
 
 .forgot-password a {
-    font-size: 0.9rem;
+    font-size: 0.9vw ;
+    padding-bottom: 1vw;
     text-decoration: none;
     color: #1a73e8;
     font-weight: 600;
@@ -89,9 +89,6 @@ button:hover {
     background-color: #001632;
 }
 
-.company-section a:hover {
-    background-color: #1a73e8;
-}
 
 .er1, .er2 {
     position: absolute;
@@ -99,5 +96,5 @@ button:hover {
     margin-top: -2rem;
     margin-left: 2rem;
     color: #f44336;
-    font-size: 0.9rem;
+    font-size: 0.9vw;
 }
