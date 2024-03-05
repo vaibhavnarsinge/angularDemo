@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { EmployeeDataService } from '../services/employee-data.service';
 
 @Component({
   selector: 'app-register',
@@ -13,12 +14,15 @@ export class RegisterComponent {
   allRegUser: any[] = [];
   loginobj: any = {
     user: '',
-    password: '',
+    phone:'',
+    email:'',
+    password: ''
   };
   loginform!: FormGroup;
   submitted: boolean = false;
 
   constructor(
+    private userService: EmployeeDataService,
     private route: ActivatedRoute,
     private router: Router,
     private formbuilder: FormBuilder
@@ -34,22 +38,26 @@ export class RegisterComponent {
     });
   }
 
-  OnSubmit() {
-    if (this.loginform.invalid) {
-      alert("All fields are compulosory");
-      return;
-    }
-    this.submitted = true;
-      alert("Register successfull");
-       this.router.navigate(['/login']);
-    
-    this.allRegUser.push(this.loginobj);
-    localStorage.setItem('allRegUser',JSON.stringify(this.loginobj)); 
-    console.log(this.loginform.value);
+  OnSubmit(){
+    debugger
+    this.userService.setRegisterDetails(this.loginobj).subscribe((res:any)  => {
+      debugger
+      this.submitted = true;
+      if (res.Success == 1) {
+        alert('Email Already Exists');
+      }
+      else if(res.Success == 2) {
+        alert('Phone No. Already Exists');
+      }
+      else if(res.Success == true) {
+        alert('Register Successfully');
+        this.router.navigate(['/login']);
+      }
+      else{
+        alert('Invalid Details ');
+      }
+    })
+
   }
 
-  // deleteData() {
-  //   localStorage.removeItem('allRegUser');
-  //   this.allRegUser = [];
-  // }
 }

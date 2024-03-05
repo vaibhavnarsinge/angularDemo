@@ -13,7 +13,7 @@
   </div>
   <h3>Dashboard</h3>
   <div class="logout-container">
-    <h3>{{alluser.email}}</h3>
+    <!-- <h3>{{alluser.email}}</h3> -->
     <button class="logout-btn" (click)="onLogout()">
       Logout
     </button>
@@ -29,15 +29,29 @@
         </tr>
       </thead>
       <tbody>
-        
+      
         <tr *ngFor="let item of user; let i = index">
           <td><div class="btn">
             <button (click)="DeleteData(item)">Delete</button>
             <button (click)="UpdateData(item)">Update</button>
           </div></td>
           <td>{{ i + 1 }}</td>
-          <!-- Dynamically generate table cells -->
-          <td *ngFor="let value of userKeys">{{ item[value] }}</td>
+          <!-- name,email,phone,aadhar,age,position,gender,bggrp,jDate,etype,address,counrty,state,city -->
+          <td>{{item.name}}</td>
+          <td>{{item.email}}</td>
+          <td>{{item.phone}}</td>
+          <td>{{item.aadhar}}</td>
+          <td>{{item.age}}</td>
+          <td>{{item.position}}</td>
+          <td>{{item.gender}}</td>
+          <td>{{item.bggrp}}</td>
+          <td>{{item.jDate}}</td>
+          <td>{{item.etype}}</td>
+          <td>{{item.address}}</td>
+          <td>{{item.counrty}}</td>
+          <td>{{item.state}}</td>
+          <td>{{item.city}}</td>
+
         </tr>
       </tbody>
       </table>

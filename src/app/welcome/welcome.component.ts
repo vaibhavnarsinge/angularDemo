@@ -16,12 +16,15 @@ export class WelcomeComponent {
   user:any;
   constructor(private route: ActivatedRoute, private router: Router, private userService:EmployeeDataService ) {
     
-      userService.getUserData().subscribe((data) => {
-        this.user = data;
+      // userService.getUserData().subscribe((data) => {
+      //   data;
+
+        this.userService.getEmpDetails().subscribe((res:any)  => {
+          this.user = res.Data
 
         if (this.user.length > 0) {
           // Get keys from the first item assuming all items have the same structure
-          this.userKeys = Object.keys(this.user[0]).filter(key => key !== 'id'); 
+          this.userKeys = Object.keys(this.user[0]); 
         }
       })
   }
@@ -29,12 +32,12 @@ export class WelcomeComponent {
   alluser: any;
 
   ngOnInit(): void {
-    debugger
-    const localData = localStorage.getItem('allRegUser');
-    if (localData != null) {
-      this.alluser = JSON.parse(localData);
-      this.alluser.email;
-    }
+    
+    // const localData = localStorage.getItem('allRegUser');
+    // if (localData != null) {
+    //   this.alluser = JSON.parse(localData);
+    //   this.alluser.email;
+    // }
   }
 
   toggleSidebar() {

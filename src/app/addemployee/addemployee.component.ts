@@ -91,14 +91,26 @@ export class AddemployeeComponent {
   }
 
   SaveUserData() {
-    const FormValue = this.addEmpForm.value;
-    this.submitted = true;
-    if (this.addEmpForm.valid) {
-      this.userService.saveUserData(FormValue).subscribe((result) => {
-        console.log(result);
-        alert('Employee Added Successfully');
-        this.router.navigate(['/welcome']);
-      });
-    }
+    this.userService.getEmpDetails().subscribe((res:any)  => {
+      if (res.Success == true) {
+        res.Data;
+      }
+    });
   }
+
+
+
+
+
+  // SaveUserData() {
+  //   const FormValue = this.addEmpForm.value;
+  //   this.submitted = true;
+  //   if (this.addEmpForm.valid) {
+  //     this.userService.saveUserData(FormValue).subscribe((result) => {
+  //       console.log(result);
+  //       alert('Employee Added Successfully');
+  //       this.router.navigate(['/welcome']);
+  //     });
+  //   }
+  // }
 }
